@@ -1,0 +1,17 @@
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(
+  188deg,
+  #6ec660 -112.86%,
+  #fff 27.91%,
+  #fff 57.77%,
+  #6ec660 236.93%
+);
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1500px;
+  padding: 20px 0 46px;
+}

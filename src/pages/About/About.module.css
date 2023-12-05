@@ -1,0 +1,41 @@
+
+.header{
+
+    text-align: center;
+    font-size: 55px;
+    text-decoration: overline;
+}
+.aboutContainer{
+    margin-top: 150px;
+}
+.infoSection{
+    display: flex;
+    gap: 50px;
+}
+.aboutStory{
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: 0.5px;
+    margin-top: 50px;
+    padding: 50px;
+}
+.image{
+    height: 150px;
+    width: 250px;
+}
+.imageContainer{
+position: relative;
+display: flex;
+flex-direction: column;
+gap: 30px;
+margin-left: 50px;
+}
+.imgOne{
+    transform: rotate(-8deg);
+}
+.imgTwo{
+    transform: rotate(3deg); 
+}
+.imgThree{
+    transform: rotate(-5deg); 
+}

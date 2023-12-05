@@ -1,0 +1,124 @@
+.supportButtonContainer {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 16px;
+  top: 60vh;
+  right: 50px;
+  height: 164px;
+  z-index: 10;
+}
+.text{
+ margin-top: 50%;
+
+}
+
+.additionalButtons {
+  display: none;
+  
+}
+.visible {
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+  gap: 16px;
+  animation: slideBack 1.5s forwards;
+ 
+}
+.messageButton {
+  animation: none; /* Initially no animation */
+
+  /* Opening animation */
+  &.open {
+    animation: slideMessageOpen 1.5s backwards;
+  }
+
+  /* Closing animation */
+  &.close {
+    animation: slideOutMessage 1s forwards;
+  }
+}
+
+.phoneButton {
+  animation: none; /* Initially no animation */
+
+  /* Opening animation */
+  &.open {
+    animation: slidePhoneOpen 0.5s backwards;
+  }
+
+  /* Closing animation */
+  &.close {
+    animation: slideOutPhone 0.5s forwards;
+  }
+}
+
+/* Slide in animations */
+@keyframes slideMessageOpen {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slidePhoneOpen {
+  from {
+    transform: translateY(20px);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideOutMessage {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+}
+
+@keyframes slideOutPhone {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+}
+
+
+.iconFill{
+border-radius: 30px;
+background: var(--color-brand-normal);
+padding: 15px;
+}
+.iconFill:hover{
+  background: var(--color-brand-dark);
+}
+.iconNoFill{
+  border-radius: 30px;
+  padding: 15px;
+  background: var(--color-primary-light);
+  border: 1px solid var(--color-primary-light);
+}
+.iconNoFill:hover{
+      background-color: var(--color-brand-light);
+}
+/* @include sm {
+  .supportButtonContainer {
+    right: 16px;
+  }
+}
+ */
