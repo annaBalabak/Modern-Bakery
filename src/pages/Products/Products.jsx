@@ -62,7 +62,7 @@ const Products = () => {
             <div>
               <div className={styles.productInfo}>
                 <h3>{name}</h3>
-                <h4>{price}</h4>
+                <h4> $ {price}</h4>
               </div>
               <div key={id} className={styles.productCard}>
                 <img
@@ -87,7 +87,6 @@ const Products = () => {
                     label="Added to cart"
                     padding="padding-even"
                     icon={InCart}
-                    onClick={() => handleAddToCart(item)}
                   />
                 )}
               </div>

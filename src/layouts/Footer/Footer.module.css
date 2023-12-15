@@ -1,0 +1,25 @@
+.footerContainer {
+display: flex;
+justify-content: space-between;
+align-items: center;
+  grid-gap: 20px;
+  background-color: var(--color-primary-dark);
+  height: 150px;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  bottom: -70vh;
+  color: var(--color-primary-light);
+  padding: 0 50px;
+}
+.information{
+    list-style: none;
+}
+.quotation{
+    font-size: 40px;
+    text-align: center;
+}
+.socialmedia{
+display: flex;
+gap: 20px;
+}

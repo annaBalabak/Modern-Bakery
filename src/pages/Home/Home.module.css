@@ -1,32 +1,90 @@
-.heading{
-color: black;
-margin-top: 150px;
+.background {
+  position: fixed;
+  background-image: url("https://images.unsplash.com/photo-1626671502253-c50bad9325b1?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  width: 100%;
+  height: 90vh;
+  object-fit: cover;
+  padding: 50px;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.mainContainer {
+  position: relative;
+  background: var(--color-background);
+  top: 90vh;
+  max-width: 1770px;
+  margin: 0 auto;
+  z-index: 1;
+}
+.header {
+  color: var(--color-background);
+  position: relative;
+  top: -170px;
+  text-align: center;
+  font-size: 200px;
+  letter-spacing: 50px;
+  font-weight: 800;
+}
+.introText {
+  color: var(--color-brand-dark);
+  margin-top: -100px;
+  padding: 50px;
+  text-align: center;
+}
+.heading {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+.paragraph {
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: 3px;
 }
 
 .container {
-    position: relative;
-   background-attachment: fixed;
+  position: relative;
   width: 100%;
-  background-image: url('https://images.unsplash.com/photo-1428895009712-de9e58a18409?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-  height: 800px;
+  height: 700px;
+  margin-top: 50px;
+}
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://images.unsplash.com/photo-1428895009712-de9e58a18409?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-size: cover;
   background-position: center;
   filter: brightness(0.5);
-} 
-
-.suppliers{
-    text-align: center;
-    color: white;
 }
 
-
+.suppliers {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  font-size: 80px;
+  padding: 80px;
+}
 
 .suppliersSection {
-  display: flex;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+  position: relative;
+  z-index: 1;
   color: white;
-
 }
-.supplierContainer{
-padding: 30px;
+.supplierContainer {
+  padding: 30px;
+}
+.suppliedProduct{
+  margin-bottom: 50px;
+  border-bottom: 3px solid white; 
+  line-height: 2.5; 
+  display: inline;
+
 }

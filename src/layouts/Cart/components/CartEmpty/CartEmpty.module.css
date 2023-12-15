@@ -1,0 +1,32 @@
+
+
+.block {
+  margin: 0 auto;
+}
+
+.centered {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  gap: 20px;
+}
+ .centered p {
+    color: black;
+    font-size: 24px;
+    line-height: 31.2px;
+    padding: 8px 0 125px;
+  }
+
+/* @include sm {
+  .root p {
+      text-align: center;
+    }
+
+    .centered p {
+        font-size: 18px;
+      }
+}
+  
+
+ */

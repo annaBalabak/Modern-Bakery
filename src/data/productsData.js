@@ -6,7 +6,7 @@ export const productsData = [
 
     searchTerm: "bread",
 
-    price: "$ 3.99",
+    price: 3.99,
     description:
       "It's made from whole grains, so there's fiber and protein to help keep you full. It is low in sodium, and doesn't contain added sugar.",
     image:
@@ -19,7 +19,7 @@ export const productsData = [
 
     searchTerm: "pastry",
 
-    price: "$ 15.99",
+    price: 15.99,
 
     description:
       "The perfect combination of a soft oatmeal raisin cookie and a peanut butter cookie, our bars are soft, tasty, and very filling. They come in two flavors: Chocolate Peanut Butter, and Orange Cranberry.",
@@ -35,7 +35,7 @@ export const productsData = [
 
     searchTerm: "bread",
 
-    price: '$ 4.99',
+    price: 4.99,
 
     description: "Whole-wheat bread is a healthy classic. ",
 
@@ -50,7 +50,7 @@ export const productsData = [
 
     searchTerm: "pastry",
 
-    price: "$ 15.99",
+    price: 15.99,
 
     description:
       "Like the name says, it tastes like a citrus straight from the tree. Packed with pieces of orange, this muffin is the perfect breakfast or dessert.",
@@ -66,7 +66,7 @@ export const productsData = [
 
     searchTerm: "bread",
 
-    price: "$ 4.99",
+    price: 4.99,
 
     description:
       "Sourdough bread is made by fermenting flour and water. The fermentation process makes nutrients more available in the bread. No added sugar.",
@@ -82,7 +82,7 @@ export const productsData = [
 
     searchTerm: "pastry",
 
-    price: "$ 20.99",
+    price: 20.99,
 
     description:
       "What self-respecting bakery would not have this classic? Our soft,wholegrain and low in sugar cinnamony buns are drizzled with a touch of citrus glaze to make the cinnamon really pop.",
@@ -98,7 +98,7 @@ export const productsData = [
 
     searchTerm: "bread",
 
-    price: "$ 4.99",
+    price: 4.99,
 
     description:
       "Seeds are some of the most nutritious foods you can eat. They pack a lot of nutrients, including fiber, protein, healthy fats, vitamins, minerals and antioxidants, into a tiny package.",
@@ -114,7 +114,7 @@ export const productsData = [
 
     searchTerm: "bread",
 
-    price: "$ 3.99",
+    price: 3.99,
 
     description:
       "Try our Healthy Banana Bread made with real butter, refined grains, and reduced in sugar.",
@@ -130,7 +130,7 @@ export const productsData = [
 
     searchTerm: "pastry",
 
-    price: "$ 15.99",
+    price: 15.99,
 
     description:
       "Filled with carrots, pecans, coconut, and pineapple, and topped with spiced cream cheese frosting, these are so much more than just carrot cakes!",
@@ -146,7 +146,7 @@ export const productsData = [
 
     searchTerm: "bread",
 
-    price: "$ 8.99",
+    price: 8.99,
 
     description:
       "Perfect for a sandwich or a toast! Enjoy the variaty of healthy, freshly baked buns! ",
@@ -162,7 +162,7 @@ export const productsData = [
 
     searchTerm: "pastry",
 
-    price: "$15.99",
+    price: 15.99,
 
     description:
       "We make our pie fillings fresh with actual fruits. Plump blueberries fill our tender, flavorful whole grain pastry.",
@@ -178,7 +178,7 @@ export const productsData = [
 
     searchTerm: "pastry",
 
-    price: "$ 12.99",
+    price: 12.99,
 
     description:
       "Made with wholegrain flour, hunks of French Broad chocolate & flaky salt",
@@ -194,7 +194,7 @@ export const productsData = [
 
     searchTerm: "pastry",
 
-    price: "$ 10.99",
+    price: 10.99,
 
     description:
       "Delicious and healthy oatmeal cookies with pureed golden raisins ",
@@ -210,7 +210,7 @@ export const productsData = [
 
     searchTerm: "pastry",
 
-    price: "$ 15.99",
+    price: 15.99,
 
     description:
       "Try our whole-grain croissants with a variaty of fillings to satisfy anyone.",
@@ -226,7 +226,7 @@ export const productsData = [
 
     searchTerm: "bread",
 
-    price: "$ 4.99",
+    price: 4.99,
 
     description: "High-hydration sourdough, full of nooks and crannies.",
 
@@ -241,7 +241,7 @@ export const productsData = [
 
     searchTerm: "pastry",
 
-    price: "$ 14.99" ,
+    price: 14.99 ,
 
     description:
       "The flaky Austrian dessert enfolds a cinnamon-scented filling of apples and raisins in layer upon layer of paper-thin whole-grain pastry.",
@@ -260,7 +260,7 @@ export const productsData = [
     description:
       "Our Country French loaves have a delightful crisp crust with a light, open crumb for an almost creamy texture.",
 
-    price: "$ 2.99",
+    price: 2.99,
 
     image:
       "https://images.pexels.com/photos/1387070/pexels-photo-1387070.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -273,7 +273,7 @@ export const productsData = [
 
     searchTerm: "pastry",
 
-    price: "$ 20.99",
+    price: 20.99,
 
     description:
       "Delicious wheatless, almond flour torte with seasonal inclusions. ",

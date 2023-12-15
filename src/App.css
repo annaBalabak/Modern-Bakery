@@ -11,11 +11,11 @@ html {
   scroll-behavior: smooth;
 }
 :root {
-  --color-primary-dark: #31261a;
+  --color-primary-dark: #0e1f2a;
   --color-primary-light: #faf4ea;
   --color-red: #de5f38;
-  --color-brand-dark: #465929;
-  --color-brand-normal: #819b57;
-  --color-brand-light: #cfcfbc;
+  --color-brand-dark:#b58c67;
+  --color-brand-normal:#914934 ;
   --page-blur-color: rgba(0, 0, 0, 0.3);
+  --color-background: #eee5da;
 }

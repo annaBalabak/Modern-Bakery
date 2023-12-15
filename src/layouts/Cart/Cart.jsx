@@ -1,18 +1,23 @@
-import React from "react";
+import React, { useMemo } from "react";
 import styles from "./Cart.module.css";
 import Modal from "../Modal";
 import closeWhiteBtn from "../../images/close-white.svg";
-import trashIcon from "../../images/trash.svg";
-import { useDispatch, useSelector } from "react-redux";
-import { removeFromCart } from "../../redux/cartSlice";
+import { useSelector } from "react-redux";
+import CartEmpty from "./components/CartEmpty";
+import CartItem from "./components/CartItem/CartItem";
+import Button from "../../ui-kit/Button/Button";
 
 const Cart = ({ toggleCart }) => {
   const cartItems = useSelector((state) => state.cart.cartItems);
-  const dispatch = useDispatch();
-  const handleRemoveFromCart = (cartItems) => {
-    dispatch(removeFromCart(cartItems));
-  };
 
+  const productTotal = useMemo(() => {
+    const total = cartItems.reduce(
+      (accumulator, element) =>
+        accumulator + element.cardQuantity * element.price,
+      0
+    );
+    return total;
+  }, [cartItems]);
   return (
     <Modal type="cart" onClick={toggleCart}>
       <div className={styles.container}>
@@ -25,23 +30,29 @@ const Cart = ({ toggleCart }) => {
             onClick={toggleCart}
           />
         </div>
-        <div className={styles.itemsContainer}>
-          <div>
-            {cartItems.map((item) => (
-              <div key={item.id} className={styles.cartItem}>
-                <img
-                  src={trashIcon}
-                  alt="trash icon"
-                  onClick={() => {
-                    handleRemoveFromCart(item);
-                  }}
-                />
-                <img className={styles.image} src={item.image} alt="" />
-                <p>{item.name}</p>
-                <p>{item.price}</p>
-              </div>
-            ))}
+        <div>
+          {cartItems.length > 0 ? (
+            <CartItem items={cartItems} />
+          ) : (
+            <CartEmpty />
+          )}
+        </div>
+        <hr />
+        <div className={styles.bottom}>
+          <div className={styles.total}>
+            Total:
+            <b>
+              <span className={styles.currency}> $ </span>
+              {productTotal.toFixed(2)}
+            </b>
           </div>
+          <Button
+            label="Оформити замовлення"
+            variant={cartItems.length > 0 ? "primary" : "disabled"}
+            padding="padding-even"
+            onClick={toggleCart}
+            disabled={cartItems.length === 0}
+          />
         </div>
       </div>
     </Modal>

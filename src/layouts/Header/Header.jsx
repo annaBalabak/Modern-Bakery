@@ -42,34 +42,38 @@ const Header = () => {
     <div>
       <header className={`${styles.header} ${sticky ? styles.sticky : ""}`}>
         <nav>
-          <img className={styles.logo} src={logo} alt=" Shop Bakery logo" />
-          <Link className={styles.navLink} to="/">
-            Home
-          </Link>
-          <Link className={styles.navLink} to="/about">
-            About
-          </Link>
-          <Link className={styles.navLink} to="/products">
-            Products
-          </Link>
-          <Link className={styles.navLink} to="/promotions">
-            Promotions
-          </Link>
-          <Link className={styles.navLink} to="/contacts">
-            Contacts
-          </Link>
+          <div className={styles.logo}>
+            <img src={logo} alt=" Shop Bakery logo" />
+          </div>
+          <div className={styles.navLinkContainer}>
+            <Link className={styles.navLink} to="/">
+              Home
+            </Link>
+            <Link className={styles.navLink} to="/about">
+              About
+            </Link>
+            <Link className={styles.navLink} to="/products">
+              Products
+            </Link>
+            <Link className={styles.navLink} to="/promotions">
+              Promotions
+            </Link>
+            <Link className={styles.navLink} to="/contacts">
+              Contacts
+            </Link>
+          </div>
+
           <div className={styles.cartContainer}>
             <img
-            className={styles.cart}
-            src={cart}
-            alt="cart icon"
-            onClick={toggleCart}
-          />
-          {totalItemsInCart !== 0 ? (
-            <span className={styles.cartCount}>{totalItemsInCart}</span>
-          ) : null}
+              className={styles.cart}
+              src={cart}
+              alt="cart icon"
+              onClick={toggleCart}
+            />
+            {totalItemsInCart !== 0 ? (
+              <div className={styles.cartCount}>{totalItemsInCart}</div>
+            ) : null}
           </div>
-          
         </nav>
       </header>
       {isOpenCart && <Cart toggleCart={toggleCart} />}

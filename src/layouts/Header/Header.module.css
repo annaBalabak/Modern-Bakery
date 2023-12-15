@@ -1,64 +1,102 @@
 header {
-  position: absolute;
-  top: 0;
-  width: 100%;
+ position: absolute; 
   padding-top: 16px;
   z-index: 1;
-  background-color: var(--color-brand-dark);
   display: flex;
+  justify-content: center;
   align-items: center;
+  width: 100%;
 }
 nav {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content:flex-end;
+  max-width: 1770px;
   width: 100%;
   gap: 50px;
   padding: 20px 100px;
+  
 }
-.logo{
+.logo {
   width: 180px;
-  margin: 0 auto;
+  display: flex;
+margin: 0 auto;
+
 }
 
+/* .navLink {
+  color: var(--color-brand-normal);
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 500;
+  transition: color 0.3s;
+  text-decoration: underline;
+}
+.navLink:hover {
+  color: var(--color-brand-dark);
+} */
+.navLinkContainer{
+  display: flex;
+  justify-content: flex-end;
+  gap: 50px;
+}
 .navLink {
-  color: var(--color-primary-light);
+  color: var(--color-brand-normal);
   text-decoration: none;
   font-size: 30px;
   font-weight: 500;
   transition: color 0.3s;
 }
-.navLink:hover {
-  color: var(--color-brand-normal);
+
+/* .navLink::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  width: 0px;
+  height: 3px;
+  background-color: var(--color-brand-dark);
+  transition: width 0.3s ease-out;
 }
-.cart{
+
+.navLink:hover::before {
+  width: 100%;
+} */
+.cartContainer {
   display: flex;
   cursor: pointer;
-  margin-left: 8px;
-  
+}
+.cart {
+  display: flex;
+  padding-bottom: 20px;
+}
+
+.cartCount {
+  height: 20px;
+  width: 20px;
+  left: -30px;
+  top: -6px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: var(--color-brand-normal);
+  color: var(--color-primary-light);
+  font-size: 15px;
+  position: relative;
+  padding: 2px;
 }
 .sticky {
   position: fixed;
+  z-index: 999;
   width: 100%;
   top: 0;
   right: 0;
   left: 0;
-  height: 150px;
-  background-color: var(--color-brand-dark);
+  height: 120px;
+  background-color: var(--color-primary-dark);
 }
-
-.cartCount{
-  display: flex;
-  justify-content: center;
-  height: 20px;
-  width: 20px;
-  top: -50px;
-  left: 25px;
-  border-radius: 50%;
-  background-color: red;
-  color: white;
-  font-size: 15px;
-  position: relative;
-  padding-top: 2px;
+.sticky .navLink {
+  color: var(--color-primary-light);
+  transition: color 0.3s;
 }
-
+.sticky .navLink:hover {
+  color: var(--color-brand-normal);
+}

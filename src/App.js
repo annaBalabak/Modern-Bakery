@@ -8,13 +8,12 @@ import Contacts from "./pages/Contacts/Contacts";
 import Header from "./layouts/Header/Header";
 import SupportModal from "./layouts/Support/SupportModal/SupportModal";
 import Home from "./pages/Home/Home";
-import Wrapper from "./wrapper/Wrapper";
+import Footer from "./layouts/Footer/Footer";
 
 function App() {
   return (
     <Router>
       <Header />
-      <Wrapper>
         <SupportModal />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -23,7 +22,7 @@ function App() {
           <Route path="/promotions" element={<Promotions />} />
           <Route path="/contacts" element={<Contacts />} />
         </Routes>
-      </Wrapper>
+        <Footer/>
     </Router>
   );
 }
