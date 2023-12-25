@@ -1,11 +1,15 @@
 
 .header{
+   
     text-align: center;
     font-size: 55px;
+    /* border-top: 3px solid;  */
     text-decoration: overline;
 }
 .aboutContainer{
-    margin-top: 150px;
+position: relative;
+background: var(--color-background);
+padding-top: 200px;
 }
 .infoSection{
     display: flex;

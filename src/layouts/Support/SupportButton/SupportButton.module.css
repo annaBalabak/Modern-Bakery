@@ -14,88 +14,37 @@
 
 }
 
-.additionalButtons {
-  display: none;
-  
-}
 .visible {
   display: flex;
   flex-direction: column;
-  opacity: 1;
   gap: 16px;
-  animation: slideBack 1.5s forwards;
- 
-}
-.messageButton {
-  animation: none; /* Initially no animation */
-
-  /* Opening animation */
-  &.open {
-    animation: slideMessageOpen 1.5s backwards;
-  }
-
-  /* Closing animation */
-  &.close {
-    animation: slideOutMessage 1s forwards;
-  }
 }
 
+.messageButton,
 .phoneButton {
-  animation: none; /* Initially no animation */
-
-  /* Opening animation */
-  &.open {
-    animation: slidePhoneOpen 0.5s backwards;
-  }
-
-  /* Closing animation */
-  &.close {
-    animation: slideOutPhone 0.5s forwards;
-  }
+  opacity: 0;
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease,
+    pointer-events 0.5s;
+}
+.visible .messageButton,
+.visible .phoneButton {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
-/* Slide in animations */
-@keyframes slideMessageOpen {
-  from {
-    transform: translateY(100px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+.messageButton.hidden {
+  opacity: 0;
+  transform: translateY(100px);
+  pointer-events: none;
 }
 
-@keyframes slidePhoneOpen {
-  from {
-    transform: translateY(20px);
-    opacity: 1;
-  }
-  to {
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideOutMessage {
-  from {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  to {
-    transform: translateY(100px);
-    opacity: 0;
-  }
-}
-
-@keyframes slideOutPhone {
-  from {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  to {
-    transform: translateY(20px);
-    opacity: 0;
-  }
+.phoneButton.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
 }
 
 
@@ -114,11 +63,5 @@ padding: 15px;
   border: 1px solid var(--color-primary-light);
 }
 .iconNoFill:hover{
-      background-color: var(--color-brand-light);
+      background-color: var(--color-brand-dark);
 }
-/* @include sm {
-  .supportButtonContainer {
-    right: 16px;
-  }
-}
- */

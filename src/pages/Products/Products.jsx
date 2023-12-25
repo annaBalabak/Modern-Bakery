@@ -26,10 +26,10 @@ const Products = () => {
   };
 
   return (
-    <div>
-      <h1 className={styles.header}>
+    <div className={styles.container}>
+{/*       <h1 className={styles.header}>
         <em>Products</em>
-      </h1>
+      </h1> */}
       <p className={styles.description}>
         Our products are handmade with intention, integrity, and aesthetic
         sensibility — our hope is that each of our creations is received as a
@@ -59,10 +59,11 @@ const Products = () => {
         {products.map((item) => {
           const { id, name, price, description, image } = item;
           return (
-            <div>
+            <div className={styles.cardContainer}>
               <div className={styles.productInfo}>
-                <h3>{name}</h3>
-                <h4> $ {price}</h4>
+                <h3>{name} </h3>
+                {""}
+                <h4>Price: ${price}</h4>
               </div>
               <div key={id} className={styles.productCard}>
                 <img

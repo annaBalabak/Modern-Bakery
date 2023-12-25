@@ -55,7 +55,7 @@
   width: 316px;
   padding: 8px 12px;
   border-radius: 8px;
-  border: 1px solid var(--color-brand-light);
+  border: 1px solid var(--color-brand-dark);
   background: var(--color-primary-light);
   margin-top: 16px;
 }

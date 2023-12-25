@@ -1,22 +1,32 @@
+.container{
+    position: relative;
+    top: 150px;
+}
+
 .header{
-    margin-top: 200px;
     text-align: center;
     font-size: 55px;
     text-decoration: overline;
 }
 .description{
-    text-align: center;
+text-align: center;
+    padding: 0 50px;
     font-size: 18px;
-    margin-top: 50px;
+    margin-top: 20px;
     line-height: 150%;
     letter-spacing: 1px;
+}
+.cardContainer{
+line-height: 150%;
 }
 .productsContainer{
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 50px;
     margin-top: 100px;
+    padding: 0 80px;
 }
 .btnContainer{
     display: flex;
@@ -24,16 +34,17 @@
     gap: 30px;
     margin-top: 50px;
 }
-
 .productInfo{
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     padding: 10px;
 }
 
 .productCard {
-  width: 400px;
-  height: 500px;
+  width: 320px;
+  height: 400px;
  display: flex; 
  justify-content: center;
  align-items: center;

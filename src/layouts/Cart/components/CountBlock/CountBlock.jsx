@@ -4,7 +4,7 @@ import {
   decreaseCart,
   increaseCart,
 } from "../../../../redux/cartSlice";
-import styles from "./CoundBlock.module.css";
+import styles from "./CountBlock.module.css";
 import dash from "../../../../images/dash-icon.svg";
 import add from "../../../../images/add-icon.svg";
 

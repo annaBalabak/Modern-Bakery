@@ -1,5 +1,5 @@
-.carouselContainer{
-    margin-top: 50px;
+.carouselContainer {
+  margin-top: 50px;
 }
 .carousel {
   position: relative;
@@ -50,18 +50,10 @@
   background-color: var(--color-brand-dark);
 }
 
-/* @include md {
-  .carousel {
-    margin: 0 48px;
-  }
-}
-@include sm {
+@media screen and (max-width: 1190px) {
   .carousel {
     margin: 0 16px;
-
-    .arrow {
-      display: none;
-    }
+  }
     .indicators {
       bottom: -24px;
     }
@@ -70,4 +62,11 @@
       height: 8px;
     }
   }
-} */
+@media screen and (max-width: 860px) {
+      .arrow {
+      display: none;
+    }
+    .slide{
+      height: 450px;
+    }
+}

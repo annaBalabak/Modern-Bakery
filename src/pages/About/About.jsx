@@ -4,9 +4,9 @@ import styles from "./About.module.css";
 const About = () => {
   return (
     <div className={styles.aboutContainer}>
-      <h1 className={styles.header}>
+{/*       <h1 className={styles.header}>
         <em>About</em>
-      </h1>
+      </h1> */}
       <div className={styles.infoSection}>
         <div className={styles.imageContainer}>
           <img
@@ -28,17 +28,17 @@ const About = () => {
         <p className={styles.aboutStory}>
           Through the ages, bread has always been an essential part of our daily
           diet. In a jungle of fast foods, chemical additives and artificial
-          flavors, I wanted to offer the supermarket public a natural and tasty
+          flavors, we wanted to offer the supermarket public a natural and tasty
           alternative to cardboard fluff breads available out here. Breads
           contain all the same primary ingredients: Flour, water, yeast and
           salt. Simple you might think… But in reality, authentic bread is an
-          intricate balance of those “basic ingredients.” In my twenties, I had
+          intricate balance of those “basic ingredients.” Years ago, we had
           the chance to learn cooking in France as an apprentice in a few grand
-          Parisian establishments. I quickly understood that fine bread was
-          required to accompany fine dining. I always wondered how the French
-          got to make bread so rich in taste and texture. I spent years trying
+          Parisian establishments. We quickly understood that fine bread was
+          required to accompany fine dining. We always wondered how the French
+          got to make bread so rich in taste and texture. We spent years trying
           and experimenting with different traditional bread recipes. Believe
-          me, failing is easier than succeeding when it comes to the “perfect”
+          us, failing is easier than succeeding when it comes to the “perfect”
           balance between those “basic ingredients!”
         </p>
       </div>

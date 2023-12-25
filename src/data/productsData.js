@@ -46,7 +46,7 @@ export const productsData = [
   {
     id: 4,
 
-    name: "Citrus Patch Muffins 5pcs",
+    name: "Citrus Muffins 5pcs",
 
     searchTerm: "pastry",
 

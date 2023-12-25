@@ -2,10 +2,11 @@ import React, { useEffect, useMemo, useState } from "react";
 import styles from "./Header.module.css";
 import logo from "../../images/logo.svg";
 import cart from "../../images/cart.svg";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useModalEffect } from "../../hooks/useModalEffect";
 import Cart from "../Cart/Cart";
 import { useSelector } from "react-redux";
+import BurgerMenu from "./components/BurgerMenu/BurgerMenu";
 
 const Header = () => {
   const [sticky, setSticky] = useState(false);
@@ -14,6 +15,7 @@ const Header = () => {
   const toggleCart = () => {
     setIsOpenCart((prev) => !prev);
   };
+
 
   useModalEffect({ isOpenCart });
 
@@ -40,11 +42,14 @@ const Header = () => {
   }, [cartItems]);
   return (
     <div>
+      <div className={styles.burgerMenu}>
+        <BurgerMenu toggleCart={toggleCart} cartQuantity={totalItemsInCart} />
+      </div>
       <header className={`${styles.header} ${sticky ? styles.sticky : ""}`}>
-        <nav>
-          <div className={styles.logo}>
-            <img src={logo} alt=" Shop Bakery logo" />
-          </div>
+        <NavLink className={styles.logo} to="/">
+          <img src={logo} alt=" Shop Bakery logo" />
+        </NavLink>
+        <nav className={styles.nav}>
           <div className={styles.navLinkContainer}>
             <Link className={styles.navLink} to="/">
               Home
@@ -54,9 +59,6 @@ const Header = () => {
             </Link>
             <Link className={styles.navLink} to="/products">
               Products
-            </Link>
-            <Link className={styles.navLink} to="/promotions">
-              Promotions
             </Link>
             <Link className={styles.navLink} to="/contacts">
               Contacts

@@ -47,7 +47,7 @@ const Cart = ({ toggleCart }) => {
             </b>
           </div>
           <Button
-            label="Оформити замовлення"
+            label="Complete the order"
             variant={cartItems.length > 0 ? "primary" : "disabled"}
             padding="padding-even"
             onClick={toggleCart}

@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import About from "./pages/About/About";
 import Products from "./pages/Products/Products";
-import Promotions from "./pages/Promotions/Promotions";
 import Contacts from "./pages/Contacts/Contacts";
 import Header from "./layouts/Header/Header";
 import SupportModal from "./layouts/Support/SupportModal/SupportModal";
@@ -19,7 +18,6 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/products" element={<Products />} />
-          <Route path="/promotions" element={<Promotions />} />
           <Route path="/contacts" element={<Contacts />} />
         </Routes>
         <Footer/>
