@@ -4,9 +4,37 @@
   max-width: 1770px;
   margin: 0 auto;
 }
-
-
-@media screen and (max-width: 860px){
+.heading {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 35px;
+  color: var(--color-brand-dark);
+  letter-spacing: 3px;
+}
+.accentText {
+  color: var(--color-brand-normal);
+  font-size: 40px;
+}
+.contactInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+  gap: 100px;
+}
+.information {
+  list-style: none;
+}
+.infoItem {
+  list-style-image: url(../../images/bullet.png);
+  font-size: 20px;
+}
+.map {
+  width: 600px;
+  height: 350px;
+  border: 3px solid var(--color-brand-normal);
+}
+@media screen and (max-width: 860px) {
   .contactsContainer {
     margin-top: 100px;
   }

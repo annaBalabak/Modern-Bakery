@@ -10,7 +10,7 @@ const About = () => {
       <Header title="About" />
       <h2 className={styles.heading}>
         Simple Ingredients Baked To Produce{" "}
-        <span className={styles.accent}>Phenomenal Bread</span>
+        <span className={styles.accentText}>Phenomenal Bread</span>
       </h2>
       <Carousel />
       <div className={styles.infoSection}>
