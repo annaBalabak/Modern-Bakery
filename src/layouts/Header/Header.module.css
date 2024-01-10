@@ -20,8 +20,7 @@ header {
 .logo {
   width: 180px;
   display: flex;
-  margin: 0 auto;
-  
+margin: 0 auto;
 }
 .navLinkContainer {
   display: flex;
@@ -32,24 +31,23 @@ header {
   color: var(--color-brand-normal);
   text-decoration: none;
   position: relative;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 500;
- 
 }
-.navLink::after{
-  content: '';
+.navLink::after {
+  content: "";
   height: 2px;
   width: 100%;
   background: var(--color-brand-normal);
   position: absolute;
   left: 0;
   bottom: -5px;
-opacity: 0; 
-transition: all 0.2s ease-in-out;
-pointer-events: none;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  pointer-events: none;
 }
 .navLink:hover::after,
-.navLink:focus::after{
+.navLink:focus::after {
   opacity: 1;
 }
 .cartContainer {
@@ -58,7 +56,7 @@ pointer-events: none;
 }
 .cart {
   display: flex;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 
 .cartCount {
@@ -81,7 +79,7 @@ pointer-events: none;
   top: 0;
   right: 0;
   left: 0;
-  height: 120px;
+  height: 100px;
   background-color: var(--color-primary-dark);
 }
 .sticky .navLink {
@@ -92,13 +90,13 @@ pointer-events: none;
   color: var(--color-brand-normal);
 }
 @media screen and (max-width: 1190px) {
-.nav{
-  padding: 20px;
-  gap: 20px;
-}
-.logo{
-  padding: 10px;
-}
+  .nav {
+    padding: 20px;
+    gap: 20px;
+  }
+  .logo {
+    padding: 10px;
+  }
 }
 
 @media screen and (max-width: 860px) {

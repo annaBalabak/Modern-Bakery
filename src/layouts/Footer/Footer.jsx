@@ -1,24 +1,48 @@
 import React from "react";
 import styles from "./Footer.module.css";
-import youtube from '../../images/youtube.svg'
-import instagramIcon from '../../images/instagram.svg'
+import youtube from "../../images/youtube.svg";
+import instagramIcon from "../../images/instagram.svg";
 import facebookIcon from "../../images/facebook.svg";
+import { motion } from "framer-motion";
 
 const Footer = () => {
   return (
     <div className={styles.footerContainer}>
-      <ul className={styles.information}>
-        <li>Call us: 717-469-7400 1976</li>
-        <li>Laudermilch Rd., Palmyra, PA 17078</li>
-        <li>Located in the Farmstead Farmers Market </li>
-        <li>Open 8 a.m. to 6 p.m.</li>
-      </ul>
-      <p className={styles.quotation}>Phenomenally <br /> Healthy! </p>
-   <div className={styles.socialmedia}>
-    <img src={youtube} alt="youtube icon" />
-    <img src={instagramIcon} alt="instagram icon" />
-    <img src={facebookIcon} alt="facebook icon" />
-   </div>
+      <p className={styles.information}>
+        Copyright © 2024 Shop Bakery.
+        <br />
+        Designed and developed by Anna Balabak.
+      </p>
+      <motion.p
+        className={styles.quotation}
+        animate={{ rotate: [-5, 5, 5, -5] }}
+        transition={{ repeat: Infinity, duration: 1 }}
+      >
+        Phenomenally <br /> Healthy!{" "}
+      </motion.p>
+      <div className={styles.socialmedia}>
+        <a
+          href="https://www.youtube.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src={youtube} alt="youtube icon" />
+        </a>
+        <a
+          href="https://www.instagram.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src={instagramIcon} alt="instagram icon" />
+        </a>
+        <a
+          href="https://www.facebook.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src={facebookIcon} alt="facebook icon" />
+        </a>
+      </div>
     </div>
   );
 };

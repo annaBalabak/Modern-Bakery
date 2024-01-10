@@ -1,31 +1,13 @@
-.container {
-  position: fixed;
-  margin-top: 400px;
+.contactsContainer {
+  padding-top: 50px;
+  position: relative;
+  max-width: 1770px;
+  margin: 0 auto;
 }
 
-.mainButton {
-  background-color: #3498db;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-}
 
-.buttonContainer {
-  position: absolute;
-  right: 20px;
-  top: -50px;
-  transform: translate(-50%, -50%);
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  opacity: 0;
-  transition: opacity 0.3s, transform 0.3s;
+@media screen and (max-width: 860px){
+  .contactsContainer {
+    margin-top: 100px;
+  }
 }
-
-.slideIn {
-  opacity: 1;
-  transform: translate(-50%, -120%);
-  transition: opacity 0.3s, transform 0.3s;
-}
-

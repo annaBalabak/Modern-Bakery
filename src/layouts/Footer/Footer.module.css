@@ -1,12 +1,12 @@
 .footerContainer {
-position:relative;
-  bottom: -500px;
+  position: relative;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   grid-gap: 20px;
   background-color: var(--color-primary-dark);
-  height: 150px; 
+  height: 150px;
   max-width: 1770px;
   width: 100%;
   margin: 0 auto;
@@ -30,16 +30,37 @@ position:relative;
   gap: 20px;
 }
 
-@media screen and (max-width: 1190px){
-  .quotation{
+@media screen and (max-width: 1190px) {
+  .quotation {
     font-size: 25px;
   }
-  .information{
+  .information {
     font-size: 12px;
   }
 }
-@media screen and (max-width: 860px){
-.footerContainer{
-  bottom: -540px;
+@media screen and (max-width: 860px) {
+  .footerContainer {
+    padding: 0 20px;
+  }
+  .information {
+    font-size: 10px;
+  }
+  .quotation {
+    font-size: 25px;
+  }
+  .socialmedia {
+    gap: 10px;
+  }
 }
+@media screen and (max-width: 510px) {
+  .footerContainer {
+    flex-direction: column-reverse;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .information {
+    text-align: center;
+  }
 }

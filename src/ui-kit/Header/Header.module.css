@@ -1,0 +1,42 @@
+.header {
+  text-align: center;
+  font-size: 55px;
+  color: var(--color-primary-dark);
+  font-style: italic;
+}
+.firstLetter {
+  font-family: "Sevillana", cursive;
+  font-size: 100px;
+}
+.divider {
+  width: 500px;
+  height: 400px;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translate(-50%);
+}
+@media screen and (max-width: 860px) {
+  .header {
+    font-size: 40px;
+  }
+  .firstLetter {
+    font-size: 80px;
+  }
+  .divider {
+    width: 350px;
+    height: 350px;
+  }
+}
+@media screen and (max-width: 510px) {
+  .header {
+    font-size: 35px;
+  }
+  .firstLetter {
+    font-size: 70px;
+  }
+  .divider {
+    width: 250px;
+    height: 300px;
+  }
+}

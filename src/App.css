@@ -3,8 +3,9 @@
   margin: 0;
   box-sizing: border-box;
 }
-body{
-  font-family: FixelDisplay;;
+body {
+  font-family: FixelDisplay;
+  background: var(--color-background);
 }
 
 html {
@@ -14,8 +15,8 @@ html {
   --color-primary-dark: #0e1f2a;
   --color-primary-light: #faf4ea;
   --color-red: #de5f38;
-  --color-brand-dark:#b58c67;
-  --color-brand-normal:#914934 ;
+  --color-brand-dark: #b58c67;
+  --color-brand-normal: #914934;
   --page-blur-color: rgba(0, 0, 0, 0.3);
   --color-background: #eee5da;
   --gray-color: #dbdbdb;

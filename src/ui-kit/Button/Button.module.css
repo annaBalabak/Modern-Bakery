@@ -58,44 +58,10 @@
   font-size: 18px;
   cursor: auto;
 }
-/* .secondary {
-  color: $text-color;
-  font-weight: 500;
-  background-color: $white-color;
-  border: 1px solid $page-accent-color;
-  font-size: 18px;
-  &:hover {
-    background-color: $page-background-color;
-  }
-  &:active {
-    border: 1px solid $active-color;
-
-    .icon {
-      path {
-        stroke: $active-color;
-      }
-    }
-  }
+@media screen and (max-width: 860px){
+  .button {
+  height: 40px;
+  width: 150px;
+  font-size: 15px;
 }
-
-.no-border {
-  color: $text-color;
-  background-color: $white-color;
-  font-size: 16px;
-  .label {
-    align-self: center;
-  }
 }
-.bg-inherit {
-  background-color: inherit;
-  color: $text-color;
-  font-weight: 700;
-  font-size: 16px;
-}
-
-.disabled {
-  background-color: $gray-light-color;
-  color: $white-color;
-  font-size: 18px;
-  cursor: auto;
-} */

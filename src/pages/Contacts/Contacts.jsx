@@ -1,33 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./Contacts.module.css";
+import { Header } from "../../ui-kit/Header/Header";
 
 const Contacts = () => {
-  const [isOpen, setIsOpen] = useState(false);
-   const [secondButtonVisible, setSecondButtonVisible] = useState(false);
-
-  const handleButtonClick = () => {
-    setIsOpen(!isOpen);
-
-    if (!isOpen) {
-      setTimeout(() => {
-        setSecondButtonVisible(true);
-      }, 500);
-    } else {
-      setSecondButtonVisible(false);
-    }
-  };
   return (
-    <div className={styles.container}>
-      <button className={styles.mainButton} onClick={handleButtonClick}>
-        Toggle Buttons
-      </button>
-      <div
-        className={`${styles.buttonContainer} ${isOpen ? styles.slideIn : ""}`}
-      >
-        <button className={styles.messageButton}>Button 1</button>
-        {secondButtonVisible && (
-          <button className={styles.phoneButton}>Button 2</button>
-        )}
+    <div className={styles.contactsContainer}>
+      <Header title="Contacts" />
+      <div>
+        <ul className={styles.information}>
+          <li>Call us: 717-469-7400 1976</li>
+          <li>Laudermilch Rd., Palmyra, PA 17078</li>
+          <li>Located in the Farmstead Farmers Market </li>
+          <li>Open 8 a.m. to 6 p.m.</li>
+        </ul>
       </div>
     </div>
   );

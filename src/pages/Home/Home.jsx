@@ -1,18 +1,71 @@
 import React from "react";
 import styles from "./Home.module.css";
-import Carousel from "../../layouts/Carousel/Carousel";
+import { motion, stagger } from "framer-motion";
+import stamp from "../../images/healthyStamp.png";
 
 const Home = () => {
+  const heading = "Phenomenally Healthy! Incridients You can pronounce!".split(
+    " "
+  );
+  const bakery = ["B", "A", "K", "E", "R", "Y"];
+  const benefits = [
+    "No Chemicals, Additives, or Preservatives!",
+    "No Bleached or Bromated Flour!",
+    "No Pesticides or Herbicides Used on the Wheat!",
+    "No Artificial or GMO!",
+  ];
+  const staggerList = stagger(0.5, { start: 0.5 });
   return (
     <div>
-      <div className={styles.background}></div>
+      <div className={styles.backgroundContainer}>
+        <div className={styles.background}></div>
+      </div>
       <div className={styles.mainContainer}>
-        <h1 className={styles.header}>BAKERY</h1>
+        <h1 className={styles.header}>
+          {bakery.map((letter, i) => (
+            <motion.span
+              key={i}
+              initial={{ opacity: 0 }}
+              whileInView={{
+                opacity: 1,
+                transition: { duration: 1, delay: staggerList(i) },
+              }}
+              viewport={{ once: true }}
+            >
+              {letter}
+            </motion.span>
+          ))}
+        </h1>
         <div className={styles.introText}>
-          <h2 className={styles.heading}>
-            Phenomenally Healthy! Incridients You can pronounce! Flour, Water,
-            Salt & Yeast!
-          </h2>
+          {heading.map((el, i) => (
+            <motion.span
+              className={styles.heading}
+              initial={{ opacity: 0 }}
+              whileInView={{
+                opacity: 1,
+                x: 0,
+                transition: { duration: 3, delay: i / 3 },
+              }}
+              viewport={{ once: true }}
+              key={i}
+            >
+              {el}{" "}
+            </motion.span>
+          ))}
+          <motion.p
+            className={styles.heading}
+            initial={{ opacity: 0, scale: 0.5 }}
+            whileInView={{
+              opacity: 1,
+              scale: 1,
+              transition: { duration: 3, delay: 2 },
+            }}
+            viewport={{ once: true }}
+          >
+            <span className={styles.ingridients}>
+              Flour, Water,Salt & Yeast!
+            </span>
+          </motion.p>
           <p className={styles.paragraph}>
             Modern Bakery specializes in naturally leavened breads using organic
             sources, the whole ingredients and maintaining the highest quality .
@@ -22,35 +75,54 @@ const Home = () => {
           </p>
         </div>
 
-        <Carousel />
-
-        <div className={styles.heroSection}>
-          <p className={styles.quotation}>
-            “Good bread is the most fundamentally satisfying of all foods; and
-            good bread with fresh butter, the greatest of feasts.” ― James Beard
-          </p>
-          <div className={styles.verticalLine}></div>
-          <div className={styles.horizontalLine}> <hr /></div>
-          <p className={styles.story}>
-            "Shop Bakery" is a brainchild born out of a desire to eat well and
-            provide our family with the best nutrition possible. We found that
-            milling the grain ourselves, just prior to adding it to the dough,
-            highlighted the flavors of the grains while increasing the
-            nutritional value of the whole-grain loaves we liked so much. Having
-            many friends and family who enjoyed our breads, we started baking
-            for others. And so, Shop Bakery was born. Our mission is to provide
-            our customers with the freshest, most nutritional and most flavorful
-            product possible. We love to see your faces fill with surprise when
-            you realize that whole grain breads really can taste this good!
-          </p>
+        <div className={styles.benefits}>
+          <ul className={styles.benefitsList}>
+            {benefits.map((benefit, i) => (
+              <motion.li
+                key={i}
+                className={styles.benefitItem}
+                initial={{ opacity: 0, x: "-500px" }}
+                whileInView={{
+                  opacity: 1,
+                  x: 0,
+                  transition: { duration: 2, delay: staggerList(i) },
+                }}
+                viewport={{ once: true }}
+              >
+                {benefit}
+              </motion.li>
+            ))}
+          </ul>
+          <motion.img
+            src={stamp}
+            alt=""
+            className={styles.stamp}
+            initial={{ opacity: 0, scale: 0 }}
+            whileInView={{
+              opacity: 1,
+              scale: 1,
+              transition: { duration: 4 },
+              rotate: [-500, 0],
+            }}
+            viewport={{ once: true }}
+          />
         </div>
 
-        <div className={styles.concept}>
+        <motion.div
+          className={styles.concept}
+          initial={{ opacity: 0, y: "200px" }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: { duration: 5, stagger: 1 },
+          }}
+          viewport={{ once: true }}
+        >
           <div className={styles.conceptContainer}>
             <img
               className={styles.conceptPhoto}
               src="https://images.unsplash.com/photo-1595263929828-220a718dfe44?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt=""
+              alt="field with ears of wheat and blue sky and sunset at the background"
             />
             <h2 className={styles.conceptHeader}>Why We Do What We Do</h2>
             <p>
@@ -65,7 +137,7 @@ const Home = () => {
             <img
               className={styles.conceptPhoto}
               src="https://images.pexels.com/photos/6294381/pexels-photo-6294381.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt=""
+              alt="a woman`s hand spreading the flour at the table"
             />
             <h2 className={styles.conceptHeader}>What We Do</h2>
             <p>
@@ -81,7 +153,7 @@ const Home = () => {
             <img
               className={styles.conceptPhoto}
               src="https://images.unsplash.com/photo-1555951015-6da899b5c2cd?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt=""
+              alt="four different types of loaf stacked vertically and flour spreading on top of them "
             />
             <h2 className={styles.conceptHeader}>How We Do It</h2>
             <p>
@@ -92,51 +164,71 @@ const Home = () => {
               crafting of our artisan breads.
             </p>
           </div>
-        </div>
+        </motion.div>
 
         <div className={styles.container}>
-          <div className={styles.text}>
-            <h1 className={styles.suppliers}>Our Suppliers</h1>
-            <div className={styles.suppliersSection}>
-              <div className={styles.supplierContainer}>
-                <h2 className={styles.suppliedProduct}>Flours</h2>
-                <ul>
-                  <li>
-                    Farm & Sparrow Organic heirloom stone-milled wheats and
-                    other specialty flours
-                  </li>
-                  <li>Lindley Mills Organic NC 10th-generation mill</li>
-                  <li>Carolina Ground Carolinas-grown organic rye and spelt</li>
-                </ul>
-              </div>
-              <div className={styles.supplierContainer}>
-                <h2 className={styles.suppliedProduct}>Produce & Dairy</h2>
-                <ul>
-                  <li>Mountain Foods Local Produce</li>
-                  <li>Farm to Home Milk Local Milk, Cream, and Eggs</li>
-                </ul>
-              </div>
-              <div className={styles.supplierContainer}>
-                <h2 className={styles.suppliedProduct}>
-                  Coffee, Tea, Herbs.
-                </h2>
-                <ul>
-                  <li>Methodical Coffee from Greenville, SC</li>
-                  <li>
-                    Tima Tea Asheville-based company working with independent
-                    Rwandan tea growers
-                  </li>
-                  <li>
-                    Heilbron Herbs Locally grown and impeccably crafted herbal
-                    products and teas
-                  </li>
-                  <li>
-                    Matcha Nude Locally woman-owned, sustainable company
-                    sourcing high quality organic Japanese matcha
-                  </li>
-                </ul>
-              </div>
-            </div>
+          <h1 className={styles.suppliers}>Our Suppliers</h1>
+          <div className={styles.suppliersSection}>
+            <motion.div
+              className={styles.supplierContainer}
+              initial={{ opacity: 0 }}
+              whileInView={{
+                opacity: 1,
+                transition: { duration: 5 },
+              }}
+              viewport={{ once: true }}
+            >
+              <h2 className={styles.suppliedProduct}>Flours</h2>
+              <ul>
+                <li>
+                  Farm & Sparrow Organic heirloom stone-milled wheats and other
+                  specialty flours
+                </li>
+                <li>Lindley Mills Organic NC 10th-generation mill</li>
+                <li>Carolina Ground Carolinas-grown organic rye and spelt</li>
+              </ul>
+            </motion.div>
+            <motion.div
+              className={styles.supplierContainer}
+              initial={{ opacity: 0 }}
+              whileInView={{
+                opacity: 1,
+                transition: { duration: 5, delay: 1 },
+              }}
+              viewport={{ once: true }}
+            >
+              <h2 className={styles.suppliedProduct}>Produce & Dairy</h2>
+              <ul>
+                <li>Mountain Foods Local Produce</li>
+                <li>Farm to Home Milk Local Milk, Cream, and Eggs</li>
+              </ul>
+            </motion.div>
+            <motion.div
+              className={styles.supplierContainer}
+              initial={{ opacity: 0 }}
+              whileInView={{
+                opacity: 1,
+                transition: { duration: 5, delay: 2 },
+              }}
+              viewport={{ once: true }}
+            >
+              <h2 className={styles.suppliedProduct}>Coffee, Tea, Herbs.</h2>
+              <ul>
+                <li>Methodical Coffee from Greenville, SC</li>
+                <li>
+                  Tima Tea Asheville-based company working with independent
+                  Rwandan tea growers
+                </li>
+                <li>
+                  Heilbron Herbs Locally grown and impeccably crafted herbal
+                  products and teas
+                </li>
+                <li>
+                  Matcha Nude Locally woman-owned, sustainable company sourcing
+                  high quality organic Japanese matcha
+                </li>
+              </ul>
+            </motion.div>
           </div>
         </div>
       </div>

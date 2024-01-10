@@ -8,19 +8,21 @@ import Header from "./layouts/Header/Header";
 import SupportModal from "./layouts/Support/SupportModal/SupportModal";
 import Home from "./pages/Home/Home";
 import Footer from "./layouts/Footer/Footer";
+import ScrollToTop from "./hooks/ScrollToTop";
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Header />
-        <SupportModal />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/contacts" element={<Contacts />} />
-        </Routes>
-        <Footer/>
+      <SupportModal />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/contacts" element={<Contacts />} />
+      </Routes>
+        <Footer />
     </Router>
   );
 }

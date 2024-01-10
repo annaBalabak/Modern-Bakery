@@ -1,3 +1,7 @@
+.backgroundContainer {
+  position: relative;
+  height: 600px;
+}
 .background {
   position: fixed;
   top: 0;
@@ -13,7 +17,6 @@
 .mainContainer {
   position: relative;
   background: var(--color-background);
-  top: 550px;
   max-width: 1770px;
   margin: 0 auto;
   z-index: 1;
@@ -33,37 +36,56 @@
   padding: 50px;
   text-align: center;
 }
+.ingridients {
+  color: var(--color-brand-normal);
+}
 .heading {
   font-size: 50px;
-  margin-bottom: 20px;
 }
 .paragraph {
   font-size: 20px;
   line-height: 150%;
   letter-spacing: 3px;
+  margin-top: 50px;
 }
-
-.heroSection {
+.benefits {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  gap: 100px;
+}
+.benefitsList {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+.benefitItem {
+  list-style-image: url(../../images/bullet.png);
+  font-size: 20px;
+}
+.stamp {
+  width: 300px;
+}
+.concept {
   display: grid;
-  grid-template-columns: 2fr 0 2fr;
+  grid-template-columns: repeat(3, 1fr);
   padding: 100px;
-  gap: 80px;
+  gap: 50px;
 }
-.verticalLine {
-  border-left: 5px solid var(--color-brand-normal);
-  width: 100%;
+.conceptContainer {
+  text-align: center;
 }
-.horizontalLine {
-  display: none;
+.conceptHeader {
+  text-align: center;
+  margin-bottom: 30px;
 }
-.quotation {
-  font-family: "Dancing Script", cursive;
-  font-size: 30px;
-  place-self: center;
-}
-.story {
-  line-height: 150%;
-  letter-spacing: 0.5px;
+.conceptPhoto {
+  width: 250px;
+  height: 350px;
+  border-radius: 50%;
+  border: 5px solid var(--color-brand-normal);
+  margin-bottom: 50px;
 }
 .container {
   position: relative;
@@ -96,7 +118,7 @@
 .suppliersSection {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  position: relative;
+  position: absolute;
   z-index: 1;
   color: var(--color-primary-light);
   padding: 20px;
@@ -109,26 +131,6 @@
   border-bottom: 3px solid var(--color-primary-light);
   line-height: 2.5;
   display: inline;
-}
-.concept {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  padding: 100px;
-  gap: 50px;
-}
-.conceptContainer {
-  text-align: center;
-}
-.conceptHeader {
-  text-align: center;
-  margin-bottom: 30px;
-}
-.conceptPhoto {
-  width: 250px;
-  height: 350px;
-  border-radius: 50%;
-  border: 5px solid var(--color-brand-normal);
-  margin-bottom: 50px;
 }
 
 @media screen and (max-width: 1190px) {
@@ -144,6 +146,13 @@
   .paragraph {
     font-size: 15px;
   }
+  .benefits {
+    gap: 50px;
+  }
+  .stamp {
+    width: 200px;
+  }
+
   .concept {
     display: block;
     max-width: 800px;
@@ -162,19 +171,13 @@
     font-size: 60px;
     top: -50px;
   }
-  .heroSection {
-    grid-template-columns: 1fr;
-  }
-  .verticalLine{
-    display: none;
+  .stamp {
+    width: 150px;
   }
 
-  .horizontalLine {
-    display: block;
-    border: none;
-    height: 5px;
-    background-color: var(--color-brand-normal);
-    width: 100%;
+  .benefits {
+    flex-direction: column-reverse;
+    gap: 50px;
   }
   .conceptContainer {
     margin: 100px 50px;
@@ -185,10 +188,36 @@
 
   .suppliersSection {
     grid-template-columns: repeat(1, 1fr);
-    width: 500px;
-    margin: 0 auto 50px;
+    max-width: 500px;
+    width: 100%;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
   }
   .suppliers {
     padding: 20px;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .header {
+    font-size: 45px;
+    top: -40px;
+     letter-spacing: 20px;
+  }
+  .introText {
+    margin-top: -50px;
+  }
+  .ingridients {
+    font-size: 20px;
+  }
+  .heading {
+    font-size: 18px;
+  }
+  .benefitItem {
+    font-size: 15px;
+  }
+  .suppliers {
+    font-size: 50px;
   }
 }

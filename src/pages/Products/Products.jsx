@@ -6,12 +6,14 @@ import { ReactComponent as Cart } from "../../images/cart.svg";
 import { ReactComponent as InCart } from "../../images/check.svg";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../../redux/cartSlice";
+import { motion } from "framer-motion";
+import { Header } from "../../ui-kit/Header/Header";
 
 const Products = () => {
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cart.cartItems);
-
   const [products, setProducts] = useState(productsData);
+
   const selectedProduct = (searchTerm) => {
     const newProduct = productsData.filter(
       (element) => element.searchTerm === searchTerm
@@ -27,33 +29,72 @@ const Products = () => {
 
   return (
     <div className={styles.container}>
-{/*       <h1 className={styles.header}>
-        <em>Products</em>
-      </h1> */}
-      <p className={styles.description}>
+      <Header title='Products' />
+      <motion.p
+        className={styles.description}
+        initial={{ opacity: 0, y: "50px" }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          transition: { duration: 3 },
+        }}
+        viewport={{ once: true }}
+      >
         Our products are handmade with intention, integrity, and aesthetic
         sensibility — our hope is that each of our creations is received as a
         gift and creates space for a moment of appreciation.
-      </p>
+      </motion.p>
       <div className={styles.btnContainer}>
-        <Button
-          variant="primary"
-          label="Bread"
-          padding="padding-even"
-          onClick={() => selectedProduct("bread")}
-        />
-        <Button
-          variant="primary"
-          label=" Pastry"
-          padding="padding-even"
-          onClick={() => selectedProduct("pastry")}
-        />
-        <Button
-          variant="primary"
-          label="Show All"
-          padding="padding-even"
-          onClick={() => setProducts(productsData)}
-        />
+        <motion.div
+          initial={{ opacity: 0, x: "-200px" }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            transition: { duration: 3 },
+          }}
+          viewport={{ once: true }}
+        >
+          <Button
+            variant="primary"
+            label="Bread"
+            padding="padding-even"
+            onClick={() => selectedProduct("bread")}
+            viewport={{ once: true }}
+          />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: "-20px" }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: { duration: 3 },
+          }}
+          viewport={{ once: true }}
+        >
+          <Button
+            variant="primary"
+            label=" Pastry"
+            padding="padding-even"
+            onClick={() => selectedProduct("pastry")}
+          />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, x: "200px" }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            transition: { duration: 3 },
+          }}
+          viewport={{ once: true }}
+        >
+          <Button
+            variant="primary"
+            label="Show All"
+            padding="padding-even"
+            onClick={() => setProducts(productsData)}
+          />
+        </motion.div>
       </div>
       <div className={styles.productsContainer}>
         {products.map((item) => {
