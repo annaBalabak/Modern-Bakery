@@ -2,13 +2,16 @@ import React from "react";
 import styles from "./Home.module.css";
 import { motion, stagger } from "framer-motion";
 import stamp from "../../images/healthyStamp.png";
+import AnimatedList from "../../ui-kit/AnimatedList/AnimatedList";
+import AnimatedHeading from "../../ui-kit/AnimatedHeading/AnimatedHeading";
 
 const Home = () => {
-  const heading = "Phenomenally Healthy! Incridients You can pronounce!".split(
+  const heading = "Phenomenally Healthy! Incridients You Can Pronounce!".split(
     " "
   );
+  const accentText = "Flour, Water,Salt & Yeast!";
   const bakery = ["B", "A", "K", "E", "R", "Y"];
-  const benefits = [
+  const benefitsList = [
     "No Chemicals, Additives, or Preservatives!",
     "No Bleached or Bromated Flour!",
     "No Pesticides or Herbicides Used on the Wheat!",
@@ -37,35 +40,10 @@ const Home = () => {
           ))}
         </h1>
         <div className={styles.introText}>
-          {heading.map((el, i) => (
-            <motion.span
-              className={styles.heading}
-              initial={{ opacity: 0 }}
-              whileInView={{
-                opacity: 1,
-                x: 0,
-                transition: { duration: 3, delay: i / 3 },
-              }}
-              viewport={{ once: true }}
-              key={i}
-            >
-              {el}{" "}
-            </motion.span>
-          ))}
-          <motion.p
-            className={styles.heading}
-            initial={{ opacity: 0, scale: 0.5 }}
-            whileInView={{
-              opacity: 1,
-              scale: 1,
-              transition: { duration: 3, delay: 2 },
-            }}
-            viewport={{ once: true }}
-          >
-            <span className={styles.ingridients}>
-              Flour, Water,Salt & Yeast!
-            </span>
-          </motion.p>
+          <div className={styles.heading}>
+            <AnimatedHeading heading={heading} accentText={accentText} />
+          </div>
+
           <p className={styles.paragraph}>
             Modern Bakery specializes in naturally leavened breads using organic
             sources, the whole ingredients and maintaining the highest quality .
@@ -76,26 +54,10 @@ const Home = () => {
         </div>
 
         <div className={styles.benefits}>
-          <ul className={styles.benefitsList}>
-            {benefits.map((benefit, i) => (
-              <motion.li
-                key={i}
-                className={styles.benefitItem}
-                initial={{ opacity: 0, x: "-500px" }}
-                whileInView={{
-                  opacity: 1,
-                  x: 0,
-                  transition: { duration: 2, delay: staggerList(i) },
-                }}
-                viewport={{ once: true }}
-              >
-                {benefit}
-              </motion.li>
-            ))}
-          </ul>
+          <AnimatedList items={benefitsList} />
           <motion.img
             src={stamp}
-            alt=""
+            alt="round stamp with the text Phenomenally Healthy in the middle and ALL Natural NON GMO on the sides "
             className={styles.stamp}
             initial={{ opacity: 0, scale: 0 }}
             whileInView={{

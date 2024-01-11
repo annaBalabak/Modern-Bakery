@@ -1,0 +1,28 @@
+.introText {
+  color: var(--color-brand-dark);
+  padding: 50px;
+  text-align: center;
+}
+.accentText {
+  color: var(--color-brand-normal);
+}
+.heading {
+  font-size: 50px;
+}
+
+@media screen and (max-width: 1190px) {
+  .heading {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 860px){
+.introText {
+  padding: 0;
+}
+}
+
+@media screen and (max-width: 550px) {
+  .heading {
+    font-size: 18px;
+  }
+}

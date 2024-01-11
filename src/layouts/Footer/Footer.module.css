@@ -55,7 +55,7 @@
 @media screen and (max-width: 510px) {
   .footerContainer {
     flex-direction: column-reverse;
-    height: fit-content;
+    height: min-content;
     align-items: center;
     justify-content: center;
     padding: 20px;

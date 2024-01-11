@@ -42,9 +42,14 @@
   line-height: 24px;
 }
 
-/* @include sm {
+@media screen and (max-width: 860px){
   .container {
-    padding: 16px;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .container {
     overflow: unset;
   }
   .title {
@@ -53,14 +58,11 @@
     line-height: 28.6px;
   }
   .bottom {
-    padding: 16px 16px 46px;
     flex-direction: column;
   }
   .total {
     justify-content: space-between;
     padding-bottom: 24px;
-    b {
-      margin: 0;
-    }
-  }
-} */
+
+  }   
+}

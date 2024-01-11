@@ -6,11 +6,8 @@
   overflow: hidden;
 }
 .heading {
-  margin-top: 100px;
-  text-align: center;
-  font-size: 35px;
-  color: var(--color-brand-dark);
-  letter-spacing: 3px;
+  margin-top: 50px;
+
 }
 .accentText {
   color: var(--color-brand-normal);
@@ -71,11 +68,7 @@
     margin-top: 100px;
   }
   .heading {
-    font-size: 25px;
     margin-top: 80px;
-  }
-  .accent {
-    font-size: 35px;
   }
   .infoSection {
     padding: 0 50px;
@@ -101,10 +94,7 @@
     width: 100%;
   }
 }
-@media screen and (max-width: 510px) {
-  .accent {
-    font-size: 30px;
-  }
+@media screen and (max-width: 550px) {
   .infoSection {
     padding: 0 50px;
   }

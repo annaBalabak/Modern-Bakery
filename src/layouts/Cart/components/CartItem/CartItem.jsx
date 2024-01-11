@@ -14,25 +14,30 @@ const CartItem = ({ items }) => {
     <div className={styles.itemsContainer}>
       {items.map((item) => (
         <div key={item.id} className={styles.cartItem}>
-          <div>
-            <img
-              className={styles.trashIcon}
-              src={trashIcon}
-              alt="trash icon"
-              onClick={() => {
-                handleRemoveFromCart(item);
-              }}
-            />
+          <div className={styles.topRow}>
+            <div>
+              <img
+                className={styles.trashIcon}
+                src={trashIcon}
+                alt="trash icon"
+                onClick={() => {
+                  handleRemoveFromCart(item);
+                }}
+              />
+            </div>
+            <div className={styles.itemDescription}>
+              <img className={styles.image} src={item.image} alt="" />
+              <p>{item.name}</p>
+            </div>
           </div>
-          <div className={styles.itemDescription}>
-            <img className={styles.image} src={item.image} alt="" />
-            <p>{item.name}</p>
-          </div>
-          <div>
-            <CountBlock item={item} />
-          </div>
-          <div>
-            <p> $ {item.price}</p>
+
+          <div className={styles.bottomRow}>
+            <div>
+              <CountBlock item={item} />
+            </div>
+            <div>
+              <p> $ {item.price}</p>
+            </div>
           </div>
         </div>
       ))}

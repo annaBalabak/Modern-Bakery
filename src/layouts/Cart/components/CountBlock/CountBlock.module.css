@@ -1,4 +1,3 @@
-
 .countBlock {
   width: 125px;
   gap: 12px;
@@ -10,12 +9,11 @@
   width: 53px;
   height: 40px;
   text-align: center;
-  border: 1px solid gray;
+  border: 1px solid var(--gray-color);
   border-radius: 8px;
   padding: 8px 12px;
 }
 
 .icon path {
-    stroke: gray;
-  }
-
+  stroke: var(--gray-color);
+}

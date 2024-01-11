@@ -30,23 +30,17 @@
   letter-spacing: 50px;
   font-weight: 800;
 }
-.introText {
-  color: var(--color-brand-dark);
-  margin-top: -100px;
-  padding: 50px;
-  text-align: center;
-}
-.ingridients {
-  color: var(--color-brand-normal);
-}
 .heading {
-  font-size: 50px;
+  margin-top: -150px;
 }
 .paragraph {
+  color: var(--color-brand-dark);
+  padding: 0 80px;
   font-size: 20px;
   line-height: 150%;
   letter-spacing: 3px;
   margin-top: 50px;
+  text-align: center;
 }
 .benefits {
   display: flex;
@@ -54,15 +48,6 @@
   align-items: center;
   margin-top: 100px;
   gap: 100px;
-}
-.benefitsList {
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-}
-.benefitItem {
-  list-style-image: url(../../images/bullet.png);
-  font-size: 20px;
 }
 .stamp {
   width: 300px;
@@ -138,11 +123,9 @@
     top: -80px;
     font-size: 100px;
   }
-
   .heading {
-    font-size: 25px;
+    margin-top: -50px;
   }
-
   .paragraph {
     font-size: 15px;
   }
@@ -170,6 +153,9 @@
   .header {
     font-size: 60px;
     top: -50px;
+  }
+  .heading {
+    margin-top: 0;
   }
   .stamp {
     width: 150px;
@@ -199,25 +185,27 @@
   }
 }
 
-@media screen and (max-width: 510px) {
+@media screen and (max-width: 550px) {
   .header {
     font-size: 45px;
     top: -40px;
-     letter-spacing: 20px;
+    letter-spacing: 20px;
   }
-  .introText {
-    margin-top: -50px;
+  .paragraph {
+    padding: 0 40px;
+    font-size: 12px;
   }
-  .ingridients {
+  .suppliedProduct {
     font-size: 20px;
   }
-  .heading {
-    font-size: 18px;
-  }
-  .benefitItem {
-    font-size: 15px;
+  .suppliersSection {
+    font-size: 12px;
   }
   .suppliers {
-    font-size: 50px;
+    font-size: 35px;
+  }
+  .conceptPhoto {
+    width: 200px;
+    height: 280px;
   }
 }

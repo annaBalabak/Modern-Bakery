@@ -16,7 +16,7 @@
     padding: 8px 0 125px;
   }
 
-/* @include sm {
+@media screen and (max-width: 550px)  {
   .root p {
       text-align: center;
     }
@@ -26,5 +26,3 @@
       }
 }
   
-
- */

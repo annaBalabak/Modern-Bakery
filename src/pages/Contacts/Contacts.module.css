@@ -6,10 +6,6 @@
 }
 .heading {
   margin-top: 100px;
-  text-align: center;
-  font-size: 35px;
-  color: var(--color-brand-dark);
-  letter-spacing: 3px;
 }
 .accentText {
   color: var(--color-brand-normal);
@@ -33,6 +29,7 @@
   width: 600px;
   height: 350px;
   border: 3px solid var(--color-brand-normal);
+  border-radius: 10px;
 }
 @media screen and (max-width: 860px) {
   .contactsContainer {

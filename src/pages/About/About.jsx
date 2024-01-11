@@ -3,15 +3,18 @@ import styles from "./About.module.css";
 import Carousel from "../../layouts/Carousel/Carousel";
 import { motion } from "framer-motion";
 import { Header } from "../../ui-kit/Header/Header";
+import AnimatedHeading from "../../ui-kit/AnimatedHeading/AnimatedHeading";
 
 const About = () => {
+  const heading = "Simple Ingredients Baked To Produce".split(" ");
+  const accentText = "Phenomenal Bread!";
   return (
     <div className={styles.aboutContainer}>
       <Header title="About" />
-      <h2 className={styles.heading}>
-        Simple Ingredients Baked To Produce{" "}
-        <span className={styles.accentText}>Phenomenal Bread</span>
-      </h2>
+      <div className={styles.heading}>
+        <AnimatedHeading heading={heading} accentText={accentText} />
+      </div>
+
       <Carousel />
       <div className={styles.infoSection}>
         <motion.img
