@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from  "./SupportButton.module.css";
 
 import supportButton from "../../../images/supportButton.svg";
-import closeGreenBtn from "../../../images/close-brown.svg";
+import closeBtn from "../../../images/close-brown.svg";
 import messageBtn from "../../../images/message.svg";
 import phoneBtn from "../../../images/phone-icon.svg";
 
@@ -53,7 +53,7 @@ const SupportButton = ({
         {isOpen ? (
           <img
             className={styles.iconNoFill}
-            src={closeGreenBtn}
+            src={closeBtn}
             alt=""
             onClick={toggleButton}
           />

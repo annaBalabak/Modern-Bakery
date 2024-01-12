@@ -4,14 +4,13 @@
   flex-direction: column;
   justify-content: flex-end;
   gap: 16px;
-  top: 60vh;
+  top: 50%;
   right: 50px;
   height: 164px;
   z-index: 10;
 }
-.text{
- margin-top: 50%;
-
+.text {
+  margin-top: 50%;
 }
 
 .visible {
@@ -23,10 +22,7 @@
 .messageButton,
 .phoneButton {
   opacity: 0;
-  transition:
-    opacity 0.5s ease,
-    transform 0.5s ease,
-    pointer-events 0.5s;
+  transition: opacity 0.5s ease, transform 0.5s ease, pointer-events 0.5s;
 }
 .visible .messageButton,
 .visible .phoneButton {
@@ -47,21 +43,20 @@
   pointer-events: none;
 }
 
-
-.iconFill{
-border-radius: 30px;
-background: var(--color-brand-normal);
-padding: 15px;
+.iconFill {
+  border-radius: 30px;
+  background: var(--color-brand-normal);
+  padding: 15px;
 }
-.iconFill:hover{
+.iconFill:hover {
   background: var(--color-brand-dark);
 }
-.iconNoFill{
+.iconNoFill {
   border-radius: 30px;
   padding: 15px;
   background: var(--color-primary-light);
   border: 1px solid var(--color-primary-light);
 }
-.iconNoFill:hover{
-      background-color: var(--color-brand-dark);
+.iconNoFill:hover {
+  background-color: var(--color-brand-dark);
 }

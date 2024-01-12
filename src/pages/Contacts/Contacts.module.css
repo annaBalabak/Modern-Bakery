@@ -11,11 +11,34 @@
   color: var(--color-brand-normal);
   font-size: 40px;
 }
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 100px;
+}
+.imageContainer img {
+  height: 250px;
+  max-width: 350px;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.imageOne {
+  transform: rotate(-12deg);
+}
+.imageTwo {
+  transform: rotate(10deg);
+}
+.imageThree {
+  transform: rotate(-5deg);
+}
 .contactInfo {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 50px 0;
+  margin: 150px 0;
   gap: 100px;
 }
 .information {
@@ -26,13 +49,46 @@
   font-size: 20px;
 }
 .map {
-  width: 600px;
+  width: 550px;
   height: 350px;
   border: 3px solid var(--color-brand-normal);
   border-radius: 10px;
 }
+
+@media screen and (max-width: 1190px) {
+  .imageContainer img {
+    height: 150px;
+    max-width: 250px;
+  }
+  .contactInfo {
+    flex-direction: column;
+  }
+  .map {
+    width: 90vw;
+  }
+}
 @media screen and (max-width: 860px) {
+  .imageContainer img {
+    height: 100px;
+    max-width: 150px;
+  }
   .contactsContainer {
     margin-top: 100px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .imageContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imageOne,
+  .imageTwo,
+  .imageThree {
+    transform: rotate(0);
+  }
+  .map {
+    width: 80vw;
+    height: 200px;
   }
 }

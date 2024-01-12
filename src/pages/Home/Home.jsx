@@ -76,7 +76,7 @@ const Home = () => {
           whileInView={{
             opacity: 1,
             y: 0,
-            transition: { duration: 5, stagger: 1 },
+            transition: { duration: 5 },
           }}
           viewport={{ once: true }}
         >
