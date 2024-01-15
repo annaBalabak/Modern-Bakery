@@ -108,7 +108,7 @@ const Home = () => {
               own stone-milled flours. Our bakery is located in the Farmstead
               Farmer's Market and is the only bakery in the area milling our own
               flours. We also are one of the few places you can taste before you
-              buy. So, come taste the tour of Sandi's Breads!
+              buy!
             </p>
           </div>
           <div className={styles.conceptContainer}>

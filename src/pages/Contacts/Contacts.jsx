@@ -57,7 +57,7 @@ const Contacts = () => {
             Farmers
             Market&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
             title="Shop Bakery Location"
-            initial={{ opacity: 0, scale: 0, x: "200px" }}
+            initial={{ opacity: 0, scale: 0, x: "100px" }}
             whileInView={{
               opacity: 1,
               scale: 1,

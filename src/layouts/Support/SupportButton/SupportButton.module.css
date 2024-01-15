@@ -5,7 +5,7 @@
   justify-content: flex-end;
   gap: 16px;
   top: 50%;
-  right: 50px;
+  right: 30px;
   height: 164px;
   z-index: 10;
 }
@@ -44,15 +44,16 @@
 }
 
 .iconFill {
-  border-radius: 30px;
+  border-radius: 50%;
   background: var(--color-brand-normal);
   padding: 15px;
 }
+
 .iconFill:hover {
   background: var(--color-brand-dark);
 }
 .iconNoFill {
-  border-radius: 30px;
+  border-radius: 50%;
   padding: 15px;
   background: var(--color-primary-light);
   border: 1px solid var(--color-primary-light);

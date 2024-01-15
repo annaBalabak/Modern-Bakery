@@ -81,14 +81,17 @@
     flex-direction: column;
     align-items: center;
   }
-
-  .imageOne,
+.imageContainer img{
+  height: 150px;
+  max-width: 200px;
+}
+ /*  .imageOne,
   .imageTwo,
   .imageThree {
     transform: rotate(0);
-  }
+  } */
   .map {
     width: 80vw;
-    height: 200px;
+    height: 150px;
   }
 }

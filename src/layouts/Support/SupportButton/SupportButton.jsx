@@ -24,13 +24,14 @@ const SupportButton = ({
           isOpen ? styles.visible : ""
         }`}
       >
+        
         <div
           className={`${styles.messageButton} ${isOpen ? "" : styles.hidden}`}
         >
           <img
             className={styles.iconFill}
             src={messageBtn}
-            alt=""
+            alt="message icon"
             onClick={() => {
               toggleMessageButton();
               setIsOpen(false);
@@ -41,7 +42,7 @@ const SupportButton = ({
           <img
             className={styles.iconFill}
             src={phoneBtn}
-            alt=""
+            alt="phone icon"
             onClick={() => {
               togglePhoneButton();
               setIsOpen(false);
@@ -54,14 +55,14 @@ const SupportButton = ({
           <img
             className={styles.iconNoFill}
             src={closeBtn}
-            alt=""
+            alt="close icon"
             onClick={toggleButton}
           />
         ) : (
           <img
             className={styles.iconFill}
             src={supportButton}
-            alt=""
+            alt="question icon"
             onClick={toggleButton}
           />
         )}
