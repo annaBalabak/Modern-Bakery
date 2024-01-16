@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import styles from  "./SupportMessage.module.css";
+import styles from "./SupportMessage.module.css";
 import Modal from "../../Modal/Modal";
-import closeWhiteBtn from '../../../images/close-white.svg'
 import Button from "../../../ui-kit/Button/Button";
 import { useModalEffect } from "../../../hooks/useModalEffect";
 import FormSubmitted from "../FormSubmitted/FormSubmitted";
+import IconButton from "../../../ui-kit/IconButton";
+import { ICONS } from "../../../images/Icons";
 
 const SupportMessage = ({ toggleSupportMessage }) => {
   const [email, setEmail] = useState("");
@@ -29,7 +30,7 @@ const SupportMessage = ({ toggleSupportMessage }) => {
       setShowFormSubmitted(true);
     }
   };
- useModalEffect(showFormSubmitted);
+  useModalEffect(showFormSubmitted);
 
   return (
     <>
@@ -38,9 +39,8 @@ const SupportMessage = ({ toggleSupportMessage }) => {
           <div className={styles.headerModal}>
             <div className={styles.headerContent}> Support Message</div>
             <div className={styles.iconContainer}>
-              <img
-                src={closeWhiteBtn}
-                alt="close icon"
+              <IconButton
+                icon={<ICONS.Close />}
                 onClick={toggleSupportMessage}
               />
             </div>
@@ -48,7 +48,9 @@ const SupportMessage = ({ toggleSupportMessage }) => {
 
           <div className={styles.formContainer}>
             <form onSubmit={handleSubmit}>
-              <p className={styles.enterData}>Write your email and your message.</p>
+              <p className={styles.enterData}>
+                Write your email and your message.
+              </p>
 
               <div className={styles.dataContainer}>
                 <label className={styles.labelData} htmlFor="name">
@@ -64,7 +66,9 @@ const SupportMessage = ({ toggleSupportMessage }) => {
                   onChange={(e) => setName(e.target.value.trim())}
                 />
                 {submitted && !name && (
-                  <p className={styles.errorMessage}>Please, enter your name!</p>
+                  <p className={styles.errorMessage}>
+                    Please, enter your name!
+                  </p>
                 )}
               </div>
 
@@ -83,10 +87,14 @@ const SupportMessage = ({ toggleSupportMessage }) => {
                   onChange={(e) => setEmail(e.target.value.trim())}
                 />
                 {submitted && !email && (
-                  <p className={styles.errorMessage}>Please, enter your email!</p>
+                  <p className={styles.errorMessage}>
+                    Please, enter your email!
+                  </p>
                 )}
                 {submitted && email && !validateEmail(email) && (
-                  <p className={styles.errorMessage}>Please, check your email!</p>
+                  <p className={styles.errorMessage}>
+                    Please, check your email!
+                  </p>
                 )}
               </div>
 
@@ -101,7 +109,9 @@ const SupportMessage = ({ toggleSupportMessage }) => {
                   onChange={handleTextareaChange}
                 ></textarea>
                 {submitted && !message && (
-                  <p className={styles.errorMessage}>Please, write your message!</p>
+                  <p className={styles.errorMessage}>
+                    Please, write your message!
+                  </p>
                 )}
               </div>
 
@@ -119,14 +129,14 @@ const SupportMessage = ({ toggleSupportMessage }) => {
           </div>
         </Modal>
       )}
-     {showFormSubmitted && (
+      {showFormSubmitted && (
         <FormSubmitted
           toggleSubmittedMessage={() => {
             setShowFormSubmitted(false);
             toggleSupportMessage();
           }}
         />
-      )} 
+      )}
     </>
   );
 };

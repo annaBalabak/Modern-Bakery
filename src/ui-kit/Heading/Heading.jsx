@@ -1,8 +1,8 @@
 import React from "react";
-import styles from "./Header.module.css";
+import styles from "./Heading.module.css";
 import divider from "../../images/divider.png";
 
-export const Header = ({ title }) => {
+export const Heading = ({ title }) => {
   return (
     <div>
       <h1 className={styles.header}>

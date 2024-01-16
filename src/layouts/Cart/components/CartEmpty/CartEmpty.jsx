@@ -1,15 +1,15 @@
 import React from "react";
 import styles from "./CartEmpty.module.css";
-import cartEmpty from "../../../../images/cart-empty.svg"
+import { ICONS } from "../../../../images/Icons";
 
 const CartEmpty = () => {
   return (
-      <div className={styles.block}>
-        <div className={styles.centered}>
-          <img src={cartEmpty} alt="empty cart" />
-          <p>There are no items in your cart yet...</p>
-        </div>
+    <div className={styles.block}>
+      <div className={styles.centered}>
+        <ICONS.CartEmpty />
+        <p>There are no items in your cart yet...</p>
       </div>
+    </div>
   );
 };
 

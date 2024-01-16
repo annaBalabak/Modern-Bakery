@@ -85,13 +85,9 @@
   height: 150px;
   max-width: 200px;
 }
- /*  .imageOne,
-  .imageTwo,
-  .imageThree {
-    transform: rotate(0);
-  } */
+
   .map {
     width: 80vw;
-    height: 150px;
+    height: 200px;
   }
 }

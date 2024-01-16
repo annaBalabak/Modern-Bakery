@@ -37,9 +37,6 @@
   width: 80px;
   height: 80px;
 }
-.trashIcon {
-  cursor: pointer;
-}
 
 @media screen and (max-width: 860px) {
   .itemDescription p {

@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "./Contacts.module.css";
-import { Header } from "../../ui-kit/Header/Header";
-import AnimatedList from "../../ui-kit/AnimatedList/AnimatedList";
+import { Heading } from "../../ui-kit/Heading/Heading";
+import AnimatedList from "../../ui-kit/AnimatedList";
 import { motion } from "framer-motion";
-import AnimatedHeading from "../../ui-kit/AnimatedHeading/AnimatedHeading";
+import AnimatedHeading from "../../ui-kit/AnimatedHeading";
 
 const Contacts = () => {
   const heading = "We Look Forward To Welcome You To".split(" ");
@@ -17,7 +17,7 @@ const Contacts = () => {
 
   return (
     <div className={styles.contactsContainer}>
-      <Header title="Contacts" />
+      <Heading title="Contacts" />
       <div className={styles.heading}>
         <AnimatedHeading heading={heading} accentText={accentText} />
       </div>

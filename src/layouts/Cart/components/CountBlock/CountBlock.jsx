@@ -1,12 +1,9 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import {
-  decreaseCart,
-  increaseCart,
-} from "../../../../redux/cartSlice";
+import { decreaseCart, increaseCart } from "../../../../redux/cartSlice";
 import styles from "./CountBlock.module.css";
-import dash from "../../../../images/dash-icon.svg";
-import add from "../../../../images/add-icon.svg";
+import IconButton from "../../../../ui-kit/IconButton";
+import { ICONS } from "../../../../images/Icons";
 
 const CountBlock = ({ item }) => {
   const dispatch = useDispatch();
@@ -20,16 +17,13 @@ const CountBlock = ({ item }) => {
 
   return (
     <div className={styles.countBlock}>
-      <img
-        src={dash}
-        alt="minus icon"
+      <IconButton
+        icon={<ICONS.Remove />}
         onClick={() => handleDecreaseCart(item)}
       />
       <div className={styles.field}>{item.cardQuantity}</div>
-      <img
-        src={add}
-        alt="plus icon"
-        className={styles.icon}
+      <IconButton
+        icon={<ICONS.Add />}
         onClick={() => handleIncreaseCart(item)}
       />
     </div>

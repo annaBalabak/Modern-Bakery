@@ -1,8 +1,9 @@
 import React from "react";
 import styles from "./BurgerMenu.module.css";
 import { Link, NavLink } from "react-router-dom";
-import closeIcon from "../../../../images/close-white.svg";
 import logo from "../../../../images/logo-white.svg";
+import IconButton from "../../../../ui-kit/IconButton";
+import { ICONS } from "../../../../images/Icons";
 
 const OpenMenu = ({ toggleMenu }) => {
   return (
@@ -13,7 +14,7 @@ const OpenMenu = ({ toggleMenu }) => {
         </NavLink>
 
         <div>
-          <img src={closeIcon} alt="" onClick={toggleMenu} />
+          <IconButton icon={<ICONS.Close />} onClick={toggleMenu} />
         </div>
       </div>
       <nav>

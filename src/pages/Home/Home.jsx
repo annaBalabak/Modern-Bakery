@@ -2,8 +2,8 @@ import React from "react";
 import styles from "./Home.module.css";
 import { motion, stagger } from "framer-motion";
 import stamp from "../../images/healthyStamp.png";
-import AnimatedList from "../../ui-kit/AnimatedList/AnimatedList";
-import AnimatedHeading from "../../ui-kit/AnimatedHeading/AnimatedHeading";
+import AnimatedList from "../../ui-kit/AnimatedList";
+import AnimatedHeading from "../../ui-kit/AnimatedHeading";
 
 const Home = () => {
   const heading = "Phenomenally Healthy! Incridients You Can Pronounce!".split(

@@ -1,8 +1,8 @@
 import styles from "./Carousel.module.css";
 import React, { useEffect, useState } from "react";
-import arrowLeft from "../../images/arrow-left.svg";
-import arrowRight from "../../images/arrow-right.svg";
-import { carouselData } from '../../data/carouselData'
+import { carouselData } from "../../data/carouselData";
+import IconButton from "../../ui-kit/IconButton";
+import { ICONS } from "../../images/Icons";
 
 const Carousel = () => {
   const [slide, setSlide] = useState(0);
@@ -30,11 +30,9 @@ const Carousel = () => {
     setSlide(slide === 0 ? carouselData.length - 1 : slide - 1);
   };
 
-  // the required distance between touchStart and touchEnd to be detected as a swipe
   const minSwipeDistance = 50;
 
   const onTouchStart = (e) => {
-    // otherwise the swipe is fired even with usual touch events
     setTouchEnd(null);
     setTouchStart(e.targetTouches[0].clientX);
   };
@@ -58,11 +56,11 @@ const Carousel = () => {
         onTouchMove={onTouchMove}
         onTouchEnd={onTouchEnd}
       >
-        <div className={styles.arrow + " " + styles["arrow-left"]}>
-          <img
-            className={styles.arrowLeft}
-            src={arrowLeft}
-            alt="arrow left"
+        <div className={styles.arrow + " " + styles["arrowLeft"]}>
+          <IconButton
+            icon={<ICONS.ArrowLeft />}
+            isFilled={true}
+             isRound={true}
             onClick={prevSlide}
           />
         </div>
@@ -75,17 +73,18 @@ const Carousel = () => {
               className={
                 slide === index
                   ? `${styles.slide}`
-                  : `${styles["slide-hidden"] + " " + styles.slide}`
+                  : `${styles["slideHidden"] + " " + styles.slide}`
               }
             />
           );
         })}
-        <div className={styles.arrow + " " + styles["arrow-right"]}>
-          <img
-            className={styles.arrowRight}
-            src={arrowRight}
-            alt="arrow right"
+        <div className={styles.arrow + " " + styles["arrowRight"]}>
+          <IconButton
+            icon={<ICONS.ArrowRight />}
+            isFilled={true}
+            isRound={true}
             onClick={nextSlide}
+            className={styles.arrowRight}
           />
         </div>
         <span className={styles.indicators}>
@@ -97,7 +96,7 @@ const Carousel = () => {
                 className={
                   slide === index
                     ? `${styles.indicator}`
-                    : `${styles.indicator + " " + styles["indicator-inactive"]}`
+                    : `${styles.indicator + " " + styles["indicatorInactive"]}`
                 }
               ></div>
             );

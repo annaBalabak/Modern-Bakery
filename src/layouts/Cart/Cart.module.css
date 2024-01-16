@@ -15,9 +15,6 @@
   background: var(--color-brand-normal);
   padding: 10px;
 }
-.icon{
-  cursor: pointer;
-}
 
 .titleCart {
   font-size: 32px;

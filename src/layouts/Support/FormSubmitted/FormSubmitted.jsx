@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import styles from "./FormSubmitted.module.css";
 import Modal from "../../Modal";
-import closeWhiteBtn from '../../../images/close-white.svg'
+import IconButton from "../../../ui-kit/IconButton";
+import { ICONS } from "../../../images/Icons";
 
 const FormSubmitted = ({ toggleSubmittedMessage }) => {
   useEffect(() => {
@@ -16,11 +17,7 @@ const FormSubmitted = ({ toggleSubmittedMessage }) => {
       <div className={styles.header}>
         <div className={styles.headerContent}> Support </div>
         <div className={styles.iconContainer}>
-              <img
-                src={closeWhiteBtn}
-                alt="close icon"
-                onClick={toggleSubmittedMessage}
-              />
+          <IconButton icon={<ICONS.Close />} onClick={toggleSubmittedMessage} />
         </div>
       </div>
       <div className={styles.mainContainer}>

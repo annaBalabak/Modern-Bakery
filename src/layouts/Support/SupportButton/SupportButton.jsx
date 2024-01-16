@@ -1,17 +1,10 @@
 import React, { useState } from "react";
-import styles from  "./SupportButton.module.css";
+import styles from "./SupportButton.module.css";
+import IconButton from "../../../ui-kit/IconButton/IconButton";
+import { ICONS } from "../../../images/Icons";
 
-import supportButton from "../../../images/supportButton.svg";
-import closeBtn from "../../../images/close-brown.svg";
-import messageBtn from "../../../images/message.svg";
-import phoneBtn from "../../../images/phone-icon.svg";
-
-const SupportButton = ({
-  togglePhoneButton,
-  toggleMessageButton,
-}) => {
+const SupportButton = ({ togglePhoneButton, toggleMessageButton }) => {
   const [isOpen, setIsOpen] = useState(false);
-
 
   const toggleButton = () => {
     setIsOpen((prev) => !prev);
@@ -24,14 +17,12 @@ const SupportButton = ({
           isOpen ? styles.visible : ""
         }`}
       >
-        
         <div
           className={`${styles.messageButton} ${isOpen ? "" : styles.hidden}`}
         >
-          <img
-            className={styles.iconFill}
-            src={messageBtn}
-            alt="message icon"
+          <IconButton
+            icon={<ICONS.SupportMessage />}
+            isFilled={true}
             onClick={() => {
               toggleMessageButton();
               setIsOpen(false);
@@ -39,10 +30,9 @@ const SupportButton = ({
           />
         </div>
         <div className={`${styles.phoneButton} ${isOpen ? "" : styles.hidden}`}>
-          <img
-            className={styles.iconFill}
-            src={phoneBtn}
-            alt="phone icon"
+          <IconButton
+            icon={<ICONS.SupportPhone />}
+            isFilled={true}
             onClick={() => {
               togglePhoneButton();
               setIsOpen(false);
@@ -52,17 +42,16 @@ const SupportButton = ({
       </div>
       <div className={styles.mainButton}>
         {isOpen ? (
-          <img
-            className={styles.iconNoFill}
-            src={closeBtn}
-            alt="close icon"
+          <IconButton
+            icon={<ICONS.SupportClose />}
+            isNotFilled={true}
             onClick={toggleButton}
           />
         ) : (
-          <img
-            className={styles.iconFill}
-            src={supportButton}
-            alt="question icon"
+          <IconButton
+            icon={<ICONS.SupportBtn />}
+            isBackground={true}
+            isFilled={true}
             onClick={toggleButton}
           />
         )}

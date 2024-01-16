@@ -14,22 +14,19 @@
   height: 500px;
   border-radius: 30px;
 }
-.slide-hidden {
+.slideHidden {
   display: none;
 }
-.arrow {
+ .arrow {
   position: absolute;
   border-radius: 30px;
-  background: var(--color-brand-normal);
+
   padding: 15px;
 }
-.arrow:hover {
-  background: var(--color-brand-dark);
-}
-.arrow-left {
+.arrowLeft {
   left: 1rem;
 }
-.arrow-right {
+.arrowRight {
   right: 1rem;
 }
 .indicators {
@@ -46,7 +43,7 @@
   margin-right: 6px;
   cursor: pointer;
 }
-.indicator-inactive {
+.indicatorInactive {
   background-color: var(--color-brand-dark);
 }
 

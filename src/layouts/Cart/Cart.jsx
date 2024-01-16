@@ -1,11 +1,12 @@
 import React, { useMemo } from "react";
 import styles from "./Cart.module.css";
 import Modal from "../Modal";
-import closeWhiteBtn from "../../images/close-white.svg";
 import { useSelector } from "react-redux";
 import CartEmpty from "./components/CartEmpty";
 import CartItem from "./components/CartItem/CartItem";
 import Button from "../../ui-kit/Button/Button";
+import IconButton from "../../ui-kit/IconButton";
+import { ICONS } from "../../images/Icons";
 
 const Cart = ({ toggleCart }) => {
   const cartItems = useSelector((state) => state.cart.cartItems);
@@ -23,12 +24,7 @@ const Cart = ({ toggleCart }) => {
       <div className={styles.container}>
         <div className={styles.headerBlock}>
           <p className={styles.titleCart}>Your Order</p>
-          <img
-            src={closeWhiteBtn}
-            alt="close icon"
-            className={styles.icon}
-            onClick={toggleCart}
-          />
+          <IconButton icon={<ICONS.Close />} onClick={toggleCart} />
         </div>
         <div>
           {cartItems.length > 0 ? (

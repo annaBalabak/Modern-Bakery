@@ -3,11 +3,11 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import About from "./pages/About/About";
 import Products from "./pages/Products/Products";
-import Contacts from "./pages/Contacts/Contacts";
-import Header from "./layouts/Header/Header";
-import SupportModal from "./layouts/Support/SupportModal/SupportModal";
-import Home from "./pages/Home/Home";
-import Footer from "./layouts/Footer/Footer";
+import Contacts from "./pages/Contacts";
+import Header from "./layouts/Header";
+import SupportModal from "./layouts/Support/SupportModal";
+import Home from "./pages/Home";
+import Footer from "./layouts/Footer";
 import ScrollToTop from "./hooks/ScrollToTop";
 
 function App() {

@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import InputMask from "react-input-mask";
 import styles from "./SupportPhone.module.css";
 import Modal from "../../Modal/Modal";
-import closeWhiteBtn from "../../../images/close-white.svg";
 import { useModalEffect } from "../../../hooks/useModalEffect";
 import Button from "../../../ui-kit/Button/Button";
 import FormSubmitted from "../FormSubmitted/FormSubmitted";
+import IconButton from "../../../ui-kit/IconButton";
+import { ICONS } from "../../../images/Icons";
 
 const SupportPhone = ({ toggleSupportPhone }) => {
   const [phone, setPhone] = useState("");
@@ -31,11 +32,7 @@ const SupportPhone = ({ toggleSupportPhone }) => {
           <div className={styles.headerModal}>
             <div className={styles.headerContent}> Support Call</div>
             <div className={styles.iconContainer}>
-              <img
-                src={closeWhiteBtn}
-                alt="close icon"
-                onClick={toggleSupportPhone}
-              />
+              <IconButton icon={<ICONS.Close />} onClick={toggleSupportPhone} />
             </div>
           </div>
 

@@ -2,12 +2,13 @@ import React, { useEffect, useMemo, useState } from "react";
 import styles from "./Header.module.css";
 import logo from "../../images/logo.svg";
 import logoScroll from "../../images/windmill.png";
-import cart from "../../images/cart.svg";
-import { Link, NavLink} from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useModalEffect } from "../../hooks/useModalEffect";
 import Cart from "../Cart/Cart";
 import { useSelector } from "react-redux";
-import BurgerMenu from "./components/BurgerMenu/BurgerMenu";
+import IconButton from "../../ui-kit/IconButton";
+import { ICONS } from "../../images/Icons";
+import BurgerMenu from "./components/BurgerMenu";
 
 const Header = () => {
   const [sticky, setSticky] = useState(false);
@@ -66,12 +67,7 @@ const Header = () => {
           </div>
 
           <div className={styles.cartContainer}>
-            <img
-              className={styles.cart}
-              src={cart}
-              alt="cart icon"
-              onClick={toggleCart}
-            />
+            <IconButton onClick={toggleCart} icon={<ICONS.CartIcon />} />
             {totalItemsInCart !== 0 ? (
               <div className={styles.cartCount}>{totalItemsInCart}</div>
             ) : null}

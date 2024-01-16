@@ -2,8 +2,9 @@ import React from "react";
 import styles from "./CartItem.module.css";
 import { useDispatch } from "react-redux";
 import { removeFromCart } from "../../../../redux/cartSlice";
-import trashIcon from "../../../../images/trash.svg";
 import CountBlock from "../CountBlock/CountBlock";
+import IconButton from "../../../../ui-kit/IconButton";
+import { ICONS } from "../../../../images/Icons";
 
 const CartItem = ({ items }) => {
   const dispatch = useDispatch();
@@ -16,10 +17,8 @@ const CartItem = ({ items }) => {
         <div key={item.id} className={styles.cartItem}>
           <div className={styles.topRow}>
             <div>
-              <img
-                className={styles.trashIcon}
-                src={trashIcon}
-                alt="trash icon"
+              <IconButton
+                icon={<ICONS.Trash />}
                 onClick={() => {
                   handleRemoveFromCart(item);
                 }}

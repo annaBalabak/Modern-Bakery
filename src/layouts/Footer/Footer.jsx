@@ -1,9 +1,7 @@
 import React from "react";
 import styles from "./Footer.module.css";
-import youtube from "../../images/youtube.svg";
-import instagramIcon from "../../images/instagram.svg";
-import facebookIcon from "../../images/facebook.svg";
 import { motion } from "framer-motion";
+import { ICONS } from "../../images/Icons";
 
 const Footer = () => {
   return (
@@ -26,21 +24,21 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src={youtube} alt="youtube icon" />
+          <ICONS.Youtube />
         </a>
         <a
           href="https://www.instagram.com/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src={instagramIcon} alt="instagram icon" />
+          <ICONS.Instagram />
         </a>
         <a
           href="https://www.facebook.com/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src={facebookIcon} alt="facebook icon" />
+          <ICONS.Facebook />
         </a>
       </div>
     </div>

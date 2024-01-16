@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { productsData } from "../../data/productsData";
 import styles from "./Products.module.css";
 import Button from "../../ui-kit/Button/Button";
-import { ReactComponent as Cart } from "../../images/cart.svg";
-import { ReactComponent as InCart } from "../../images/check.svg";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../../redux/cartSlice";
 import { motion } from "framer-motion";
-import { Header } from "../../ui-kit/Header/Header";
+
+import { ICONS } from "../../images/Icons";
+import { Heading } from "../../ui-kit/Heading/Heading";
 
 const Products = () => {
   const dispatch = useDispatch();
@@ -29,7 +29,7 @@ const Products = () => {
 
   return (
     <div className={styles.container}>
-      <Header title='Products' />
+      <Heading title="Products" />
       <motion.p
         className={styles.description}
         initial={{ opacity: 0, y: "50px" }}
@@ -120,7 +120,6 @@ const Products = () => {
                     variant="primary"
                     label="Add to cart"
                     padding="padding-even"
-                    icon={Cart}
                     onClick={() => handleAddToCart(item)}
                   />
                 ) : (
@@ -128,7 +127,7 @@ const Products = () => {
                     variant="primary"
                     label="Added to cart"
                     padding="padding-even"
-                    icon={InCart}
+                    icon={ICONS.InCart}
                   />
                 )}
               </div>

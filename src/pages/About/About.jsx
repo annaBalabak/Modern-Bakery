@@ -1,16 +1,16 @@
 import React from "react";
 import styles from "./About.module.css";
-import Carousel from "../../layouts/Carousel/Carousel";
+import Carousel from "../../layouts/Carousel";
 import { motion } from "framer-motion";
-import { Header } from "../../ui-kit/Header/Header";
-import AnimatedHeading from "../../ui-kit/AnimatedHeading/AnimatedHeading";
+import AnimatedHeading from "../../ui-kit/AnimatedHeading";
+import { Heading } from "../../ui-kit/Heading/Heading";
 
 const About = () => {
   const heading = "Simple Ingredients Baked To Produce".split(" ");
   const accentText = "Phenomenal Bread!";
   return (
     <div className={styles.aboutContainer}>
-      <Header title="About" />
+      <Heading title="About" />
       <div className={styles.heading}>
         <AnimatedHeading heading={heading} accentText={accentText} />
       </div>
