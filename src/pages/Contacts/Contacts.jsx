@@ -34,18 +34,18 @@ const Contacts = () => {
         <img
           className={styles.imageOne}
           src="https://images.unsplash.com/photo-1544955752-78051eb9b0b8?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt=""
+          alt="a hand spreading flour on a black background "
         />
 
         <img
           className={styles.imageTwo}
           src="https://images.unsplash.com/photo-1649698892055-7794c176c880?q=80&w=1816&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt=""
+          alt="two hands stiring a flour on a black background"
         />
         <img
           className={styles.imageThree}
           src="https://images.unsplash.com/photo-1566698629409-787a68fc5724?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt=""
+          alt="a basket filled with various bread on a black backgroud "
         />
       </motion.div>
       <div className={styles.contactInfo}>

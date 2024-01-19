@@ -20,7 +20,7 @@
   font-size: 32px;
   font-weight: 500;
   line-height: 41.6px;
-  color: white;
+  color: var(--color-primary-light);
 }
 
 .bottom {

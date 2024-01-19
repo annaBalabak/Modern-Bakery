@@ -54,7 +54,7 @@
 }
 .disabled {
   background-color:var( --gray-color);
-  color: white;
+  color: var(--color-primary-light);
   font-size: 18px;
   cursor: auto;
 }
