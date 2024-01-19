@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
-import About from "./pages/About/About";
-import Products from "./pages/Products/Products";
+import About from "./pages/About";
+import Products from "./pages/Products";
 import Contacts from "./pages/Contacts";
 import Header from "./layouts/Header";
 import SupportModal from "./layouts/Support/SupportModal";

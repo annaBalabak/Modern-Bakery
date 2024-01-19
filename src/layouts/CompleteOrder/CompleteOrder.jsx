@@ -1,18 +1,21 @@
 import React, { useState } from "react";
 import InputMask from "react-input-mask";
-import styles from "./SupportPhone.module.css";
-import Modal from "../../Modal/Modal";
-import { useModalEffect } from "../../../hooks/useModalEffect";
-import Button from "../../../ui-kit/Button/Button";
-import FormSubmitted from "../../FormSubmitted";
-import IconButton from "../../../ui-kit/IconButton";
-import { ICONS } from "../../../images/Icons";
+import styles from "./CompleteOrder.module.css";
+import Modal from "../Modal";
+import Button from "../../ui-kit/Button/Button";
+import IconButton from "../../ui-kit/IconButton";
+import { ICONS } from "../../images/Icons";
+import { useModalEffect } from "../../hooks/useModalEffect";
+import FormSubmitted from "../FormSubmitted";
+import { clearCart } from "../../redux/cartSlice";
+import { useDispatch } from "react-redux";
 
-const SupportPhone = ({ toggleSupportPhone }) => {
-  const [phone, setPhone] = useState("");
+const CompleteOrder = ({ toggleOrder, toggleCart }) => {
   const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [showFormSubmitted, setShowFormSubmitted] = useState(false);
+  const dispatch = useDispatch();
 
   const validatePhone = (value) => /^\+1 \(\d{3}\) \d{3}-\d{4}$/.test(value);
 
@@ -23,23 +26,23 @@ const SupportPhone = ({ toggleSupportPhone }) => {
       setShowFormSubmitted(true);
     }
   };
-
   useModalEffect(showFormSubmitted);
+
   return (
     <>
       {!showFormSubmitted && (
-        <Modal type="support" onClick={toggleSupportPhone}>
+        <Modal type="support">
           <div className={styles.headerModal}>
-            <div className={styles.headerContent}> Support Call</div>
+            <div className={styles.headerContent}>DELIVERY</div>
             <div className={styles.iconContainer}>
-              <IconButton icon={<ICONS.Close />} onClick={toggleSupportPhone} />
+              <IconButton icon={<ICONS.Close />} onClick={toggleOrder} />
             </div>
           </div>
 
           <div className={styles.formContainer}>
             <form onSubmit={handleSubmit}>
               <p className={styles.enterData}>
-                Please, enter your name and phone number!
+                Please, fill out the form to complete the order!
               </p>
 
               <div className={styles.dataContainer}>
@@ -53,15 +56,16 @@ const SupportPhone = ({ toggleSupportPhone }) => {
                   className={styles.dataInput}
                   type="text"
                   placeholder="Enter your name"
-                  onChange={(e) => setName(e.target.value.trim())}
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
                 />
+
                 {submitted && !name && (
                   <p className={styles.errorMessage}>
                     Please, enter your name!
                   </p>
                 )}
               </div>
-
               <div className={styles.dataContainer}>
                 <label className={styles.labelData} htmlFor="phone">
                   Phone number <span>*</span>
@@ -76,6 +80,7 @@ const SupportPhone = ({ toggleSupportPhone }) => {
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
                 />
+
                 {submitted && !phone && (
                   <p className={styles.errorMessage}>
                     Please, enter your phone number!
@@ -87,38 +92,29 @@ const SupportPhone = ({ toggleSupportPhone }) => {
                   </p>
                 )}
               </div>
-
-              <div className={styles.commentContainer}>
-                <label className="labelData" htmlFor="message">
-                  Your message
-                </label>
-
-                <textarea
-                  id="message"
-                  className={`${styles.dataInput} ${styles.dataTextarea}`}
-                ></textarea>
-              </div>
               <div className="button">
                 <Button
                   variant="primary"
-                  label="Call me back"
+                  label="Submit the order"
                   padding="padding-sm"
                   isFullWidth={true}
                   type="submit"
-                  onClick={handleSubmit}
                 />
               </div>
             </form>
           </div>
         </Modal>
       )}
+
       {showFormSubmitted && (
         <FormSubmitted
-          label="Support"
-          gratitude="Thank you for contacting us!"
+          label="Delivery"
+          gratitude="Thank you for your order!"
           toggleSubmittedMessage={() => {
             setShowFormSubmitted(false);
-            toggleSupportPhone();
+            toggleOrder();
+            toggleCart();
+            dispatch(clearCart());
           }}
         />
       )}
@@ -126,4 +122,4 @@ const SupportPhone = ({ toggleSupportPhone }) => {
   );
 };
 
-export default SupportPhone;
+export default CompleteOrder;

@@ -1,0 +1,77 @@
+.headerModal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-brand-normal);
+  font-size: 24px;
+  line-height: 130%;
+  padding-top: 16px;
+  padding-bottom: 17px;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+}
+.iconContainer {
+  display: flex;
+  justify-self: flex-end;
+  margin-right: 20px;
+}
+.headerContent {
+  margin: 0 auto;
+  color:var(--color-primary-light);
+  font-size: 30px;
+  font-weight: 600;
+}
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 50px;
+}
+.formContainer form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.enterData {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+  text-align: center;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.dataContainer {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dataInput {
+  width: 316px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--color-brand-dark);
+  background: var(--color-primary-light);
+  margin-top: 16px;
+}
+
+.labelData {
+  line-height: 150%;
+}
+.labelData span {
+  color: var(--color-red);
+}
+
+.button {
+  width: 316px;
+}
+.errorMessage {
+  color: var(--color-red);
+  font-size: 12px;
+  line-height: 200%;
+}

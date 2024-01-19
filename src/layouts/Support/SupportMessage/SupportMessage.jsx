@@ -3,7 +3,7 @@ import styles from "./SupportMessage.module.css";
 import Modal from "../../Modal/Modal";
 import Button from "../../../ui-kit/Button/Button";
 import { useModalEffect } from "../../../hooks/useModalEffect";
-import FormSubmitted from "../FormSubmitted/FormSubmitted";
+import FormSubmitted from "../../FormSubmitted";
 import IconButton from "../../../ui-kit/IconButton";
 import { ICONS } from "../../../images/Icons";
 
@@ -131,6 +131,8 @@ const SupportMessage = ({ toggleSupportMessage }) => {
       )}
       {showFormSubmitted && (
         <FormSubmitted
+          label="Support"
+          gratitude="Thank you for contacting us!"
           toggleSubmittedMessage={() => {
             setShowFormSubmitted(false);
             toggleSupportMessage();

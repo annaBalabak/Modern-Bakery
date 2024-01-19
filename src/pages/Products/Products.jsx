@@ -100,13 +100,13 @@ const Products = () => {
         {products.map((item) => {
           const { id, name, price, description, image } = item;
           return (
-            <div className={styles.cardContainer}>
+            <div key={id} className={styles.cardContainer}>
               <div className={styles.productInfo}>
                 <h3>{name} </h3>
                 {""}
                 <h4>Price: ${price}</h4>
               </div>
-              <div key={id} className={styles.productCard}>
+              <div className={styles.productCard}>
                 <img
                   className={styles.cardImage}
                   src={image}

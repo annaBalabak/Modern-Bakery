@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useMemo, useState } from "react";
 import styles from "./Cart.module.css";
 import Modal from "../Modal";
 import { useSelector } from "react-redux";
@@ -7,9 +7,11 @@ import CartItem from "./components/CartItem/CartItem";
 import Button from "../../ui-kit/Button/Button";
 import IconButton from "../../ui-kit/IconButton";
 import { ICONS } from "../../images/Icons";
+import CompleteOrder from "../CompleteOrder/CompleteOrder";
 
 const Cart = ({ toggleCart }) => {
   const cartItems = useSelector((state) => state.cart.cartItems);
+  const [isOrder, setIsOrder] = useState(false);
 
   const productTotal = useMemo(() => {
     const total = cartItems.reduce(
@@ -19,6 +21,9 @@ const Cart = ({ toggleCart }) => {
     );
     return total;
   }, [cartItems]);
+  const completeOrder = ()=> {
+  setIsOrder((prev) => !prev);
+  }
   return (
     <Modal type="cart" onClick={toggleCart}>
       <div className={styles.container}>
@@ -46,9 +51,12 @@ const Cart = ({ toggleCart }) => {
             label="Complete the order"
             variant={cartItems.length > 0 ? "primary" : "disabled"}
             padding="padding-even"
-            onClick={toggleCart}
+            onClick={completeOrder}
             disabled={cartItems.length === 0}
           />
+          {isOrder && (
+            <CompleteOrder toggleOrder = {completeOrder} toggleCart ={toggleCart}/>
+          )}
         </div>
       </div>
     </Modal>

@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import styles from "./FormSubmitted.module.css";
-import Modal from "../../Modal";
-import IconButton from "../../../ui-kit/IconButton";
-import { ICONS } from "../../../images/Icons";
+import Modal from "../Modal";
+import IconButton from "../../ui-kit/IconButton";
+import { ICONS } from "../../images/Icons";
 
-const FormSubmitted = ({ toggleSubmittedMessage }) => {
+const FormSubmitted = ({ toggleSubmittedMessage, label, gratitude }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       toggleSubmittedMessage();
@@ -15,7 +15,7 @@ const FormSubmitted = ({ toggleSubmittedMessage }) => {
   return (
     <Modal type="formSubmitted" onClick={toggleSubmittedMessage}>
       <div className={styles.header}>
-        <div className={styles.headerContent}> Support </div>
+        <div className={styles.headerContent}> {label} </div>
         <div className={styles.iconContainer}>
           <IconButton icon={<ICONS.Close />} onClick={toggleSubmittedMessage} />
         </div>
@@ -23,7 +23,7 @@ const FormSubmitted = ({ toggleSubmittedMessage }) => {
       <div className={styles.mainContainer}>
         <h2>Your request has been sent.</h2>
         <h3>We will get in touch with you as soon as possible.</h3>
-        <h2>Thank you for contacting us!</h2>
+        <h2>{gratitude}</h2>
       </div>
     </Modal>
   );
