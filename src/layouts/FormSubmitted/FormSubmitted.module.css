@@ -24,11 +24,9 @@
 .mainContainer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   gap: 16px;
-  padding-top: 46px;
-  padding-bottom: 60px;
+  padding: 46px 10px 60px ;
 }
 .mainContainer h2 {
   font-size: 20px;
