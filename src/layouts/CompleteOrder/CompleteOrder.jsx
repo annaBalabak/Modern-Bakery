@@ -57,7 +57,7 @@ const CompleteOrder = ({ toggleOrder, toggleCart }) => {
                   type="text"
                   placeholder="Enter your name"
                   value={name}
-                  onChange={(e) => setName(e.target.value)}
+                  onChange={(e) => setName(e.target.value.trim())}
                 />
 
                 {submitted && !name && (
