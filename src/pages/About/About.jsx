@@ -57,7 +57,7 @@ const About = () => {
           texture. We spent years trying and experimenting with different
           traditional bread recipes. Believe us, failing is easier than
           succeeding when it comes to the “perfect” balance between those “basic
-          ingredients!”{" "}
+          ingredients!”
         </p>
         <p className={styles.aboutStory}>
           We found that milling the grain ourselves, just prior to adding it to

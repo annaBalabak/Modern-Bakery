@@ -7,9 +7,11 @@ export const productsData = [
     searchTerm: "bread",
 
     price: 3.99,
+
     description:
       "It's made from whole grains, so there's fiber and protein to help keep you full. It is low in sodium, and doesn't contain added sugar.",
-    image:
+   
+      image:
       "https://images.unsplash.com/photo-1505253364048-bf56659875a6?q=80&w=1882&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {

@@ -5,7 +5,6 @@ import Button from "../../ui-kit/Button/Button";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../../redux/cartSlice";
 import { motion } from "framer-motion";
-
 import { ICONS } from "../../images/Icons";
 import { Heading } from "../../ui-kit/Heading/Heading";
 

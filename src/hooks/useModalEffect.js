@@ -4,9 +4,15 @@ export const useModalEffect = ({
   isOpenCart,
   isPhoneModalOpen,
   isMessageModalOpen,
+  showFormSubmitted,
 }) => {
   useEffect(() => {
-    if (isOpenCart || isPhoneModalOpen || isMessageModalOpen) {
+    if (
+      isOpenCart ||
+      isPhoneModalOpen ||
+      isMessageModalOpen ||
+      showFormSubmitted
+    ) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "unset";
@@ -14,5 +20,5 @@ export const useModalEffect = ({
     return () => {
       document.body.style.overflow = "unset";
     };
-  }, [isOpenCart, isPhoneModalOpen, isMessageModalOpen]);
+  }, [isOpenCart, isPhoneModalOpen, isMessageModalOpen, showFormSubmitted]);
 };

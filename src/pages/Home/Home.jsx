@@ -45,7 +45,7 @@ const Home = () => {
           </div>
 
           <p className={styles.paragraph}>
-            Modern Bakery specializes in naturally leavened breads using organic
+            Shop Bakery specializes in naturally leavened breads using organic
             sources, the whole ingredients and maintaining the highest quality .
             Our products are handmade with intention, integrity, and aesthetic
             sensibility — our hope is that each of our creations is received as
@@ -86,7 +86,7 @@ const Home = () => {
               src="https://images.unsplash.com/photo-1595263929828-220a718dfe44?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="field with ears of wheat and blue sky and sunset at the background"
             />
-            <h2 className={styles.conceptHeader}>Why We Do What We Do</h2>
+            <h2 className={styles.conceptHeader}>Why We Do What We Do?</h2>
             <p>
               We believe everyone should be able to eat great food that makes
               them feel good. That's why we stone mill our own flours and bake
@@ -101,7 +101,7 @@ const Home = () => {
               src="https://images.pexels.com/photos/6294381/pexels-photo-6294381.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
               alt="a woman`s hand spreading the flour at the table"
             />
-            <h2 className={styles.conceptHeader}>What We Do</h2>
+            <h2 className={styles.conceptHeader}>What We Do?</h2>
             <p>
               What do we do? We bring to you, our customer, a wide variety of
               fresh, whole-grain, artisan breads and pastries created with our
@@ -117,7 +117,7 @@ const Home = () => {
               src="https://images.unsplash.com/photo-1555951015-6da899b5c2cd?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="four different types of loaf stacked vertically and flour spreading on top of them "
             />
-            <h2 className={styles.conceptHeader}>How We Do It</h2>
+            <h2 className={styles.conceptHeader}>How We Do It?</h2>
             <p>
               We mill our flours fresh in our own stone mills. We use the most
               natural ingredients and keep our ingredient lists as short as

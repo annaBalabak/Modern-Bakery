@@ -16,7 +16,7 @@ const Footer = () => {
         animate={{ rotate: [-5, 5, 5, -5] }}
         transition={{ repeat: Infinity, duration: 1 }}
       >
-        Phenomenally <br /> Healthy!{" "}
+        Phenomenally <br /> Healthy!
       </motion.p>
       <div className={styles.socialmedia}>
         <a

@@ -20,7 +20,7 @@ header {
 .logo {
   width: 180px;
   display: flex;
-margin: 0 auto;
+  margin: 0 auto;
 }
 .navLinkContainer {
   display: flex;
@@ -52,7 +52,7 @@ margin: 0 auto;
 }
 .cartContainer {
   display: flex;
-  cursor: pointer; 
+  cursor: pointer;
   padding-bottom: 10px;
 }
 
