@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import styles from "./Header.module.css";
 import logo from "../../images/logo.svg";
 import logoScroll from "../../images/windmill.png";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useModalEffect } from "../../hooks/useModalEffect";
 import Cart from "../Cart/Cart";
 import { useSelector } from "react-redux";
@@ -47,9 +47,9 @@ const Header = () => {
         <BurgerMenu toggleCart={toggleCart} cartQuantity={totalItemsInCart} />
       </div>
       <header className={`${styles.header} ${sticky ? styles.sticky : ""}`}>
-        <NavLink className={styles.logo} to="/">
+        <Link className={styles.logo} to="/">
           <img src={sticky ? logoScroll : logo} alt=" Shop Bakery logo" />
-        </NavLink>
+        </Link>
         <nav className={styles.nav}>
           <div className={styles.navLinkContainer}>
             <Link className={styles.navLink} to="/">

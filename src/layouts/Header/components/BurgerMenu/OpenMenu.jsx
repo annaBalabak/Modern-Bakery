@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./BurgerMenu.module.css";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import logo from "../../../../images/logo-white.svg";
 import IconButton from "../../../../ui-kit/IconButton";
 import { ICONS } from "../../../../images/Icons";
@@ -9,9 +9,9 @@ const OpenMenu = ({ toggleMenu }) => {
   return (
     <div className={styles.openMenu}>
       <div className={styles.openHeader}>
-        <NavLink className={styles.logo} to="/">
+        <Link className={styles.logo} to="/">
           <img className={styles.logo} src={logo} alt=" Shop Bakery logo" />
-        </NavLink>
+        </Link>
 
         <div>
           <IconButton icon={<ICONS.Close />} onClick={toggleMenu} />
